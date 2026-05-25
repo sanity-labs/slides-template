@@ -221,3 +221,78 @@ describe('flattenForBrand — output is frozen', () => {
     expect(Object.isFrozen(out.spacing)).toBe(true);
   });
 });
+
+describe('flattenForBrand — short-form aliases', () => {
+  test('emits short color aliases (fg-base, bg-base, accent) keyed off the dark theme', () => {
+    const out = flattenForBrand(
+      buildTokens({
+        primitiveColors: [{ name: 'brand', hex: '#ff5500' }],
+        semanticColors: [
+          { name: 'fg-base', light: '#0b0b0b', dark: '#ffffff' },
+          { name: 'bg-base', light: '#ffffff', dark: '#0b0b0b' },
+        ],
+      }),
+    );
+
+    // Short aliases pin Sanity's dark-default deck aesthetic so the agent's
+    // Tier-2 components reach for the right contrast automatically.
+    expect(out.colors['fg-base']).toBe('#ffffff'); // dark theme
+    expect(out.colors['bg-base']).toBe('#0b0b0b'); // dark theme
+    expect(out.colors['accent']).toBe('#ff5500'); // primitive.brand
+
+    // Long-form keys still present alongside.
+    expect(out.colors['semantic.fg-base.light']).toBe('#0b0b0b');
+    expect(out.colors['semantic.fg-base.dark']).toBe('#ffffff');
+    expect(out.colors['primitive.brand']).toBe('#ff5500');
+  });
+
+  test('short aliases for missing source tokens are silently skipped (tolerant)', () => {
+    // A brand that doesn't ship 'fg-dim' or 'accent-magenta' should still
+    // flatten cleanly — only the aliases with real sources get emitted.
+    const out = flattenForBrand(
+      buildTokens({
+        primitiveColors: [{ name: 'brand', hex: '#ff5500' }],
+        semanticColors: [{ name: 'fg-base', light: '#000000', dark: '#ffffff' }],
+      }),
+    );
+
+    expect(out.colors['fg-base']).toBe('#ffffff');
+    expect(out.colors['accent']).toBe('#ff5500');
+    expect(out.colors['fg-dim']).toBeUndefined();
+    expect(out.colors['accent-magenta']).toBeUndefined();
+  });
+
+  test('emits short spacing aliases (xs, sm, md, lg, xl) from the spacing-N scale', () => {
+    const out = flattenForBrand(
+      buildTokens({
+        spacing: [
+          { name: 'spacing-4', raw: '0.25rem', rem: 0.25, px: 4 },
+          { name: 'spacing-8', raw: '0.5rem', rem: 0.5, px: 8 },
+          { name: 'spacing-16', raw: '1rem', rem: 1, px: 16 },
+          { name: 'spacing-32', raw: '2rem', rem: 2, px: 32 },
+          { name: 'spacing-48', raw: '3rem', rem: 3, px: 48 },
+        ],
+      }),
+    );
+
+    expect(out.spacing['xs']).toBeCloseTo(2.8, 5); // 4 * 0.7
+    expect(out.spacing['sm']).toBeCloseTo(5.6, 5); // 8 * 0.7
+    expect(out.spacing['md']).toBeCloseTo(11.2, 5); // 16 * 0.7
+    expect(out.spacing['lg']).toBeCloseTo(22.4, 5); // 32 * 0.7
+    expect(out.spacing['xl']).toBeCloseTo(33.6, 5); // 48 * 0.7
+    // Long-form keys still addressable.
+    expect(out.spacing['spacing-16']).toBeCloseTo(11.2, 5);
+  });
+
+  test('short spacing aliases for missing scale entries are silently skipped', () => {
+    const out = flattenForBrand(
+      buildTokens({
+        spacing: [{ name: 'spacing-16', raw: '1rem', rem: 1, px: 16 }],
+      }),
+    );
+
+    expect(out.spacing['md']).toBeCloseTo(11.2, 5);
+    expect(out.spacing['xs']).toBeUndefined();
+    expect(out.spacing['xl']).toBeUndefined();
+  });
+});

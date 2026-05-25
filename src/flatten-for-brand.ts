@@ -140,6 +140,60 @@ const spatialPxToPt = (px: number): Pt => px * 0.7;
  */
 const typographyPxToPt = (px: number): Pt => px;
 
+/**
+ * Short-form alias map for the brand-locked Tailwind dialect.
+ *
+ * The substrate's resolver looks up `template.colors[<token>]` for
+ * `bg-<token>`, `text-<token>` class names. Long-form keys like
+ * `semantic.fg-base.dark` work but are verbose; agents reach for
+ * `bg-fg-base` instinctively (matches the broader Sanity ecosystem
+ * convention). This table assigns the canonical Sanity deck variant
+ * (DARK theme, since Sanity decks are dark-default) to each short alias.
+ *
+ * The long-form keys stay in `template.colors` alongside, so consumers
+ * that want the light variant or a specific primitive can still address
+ * them via `semantic.fg-base.light` / `primitive.brand`.
+ */
+const SHORT_COLOR_ALIASES: Readonly<Record<string, { kind: 'semantic' | 'primitive'; name: string; theme?: 'light' | 'dark' }>> = {
+  // Semantic dark-theme defaults — what an agent reaches for first.
+  'fg-base': { kind: 'semantic', name: 'fg-base', theme: 'dark' },
+  'fg-dim': { kind: 'semantic', name: 'fg-dim', theme: 'dark' },
+  'fg-faint': { kind: 'semantic', name: 'fg-faint', theme: 'dark' },
+  'fg-inverse': { kind: 'semantic', name: 'fg-inverse-base', theme: 'dark' },
+  'bg-base': { kind: 'semantic', name: 'bg-base', theme: 'dark' },
+  'bg-dim': { kind: 'semantic', name: 'bg-dim', theme: 'dark' },
+  'bg-inverse': { kind: 'semantic', name: 'bg-inverse-base', theme: 'dark' },
+  'border-base': { kind: 'semantic', name: 'border-base', theme: 'dark' },
+  'border-dim': { kind: 'semantic', name: 'border-dim', theme: 'dark' },
+  // Brand accent — the orange/red Sanity primary mark color.
+  accent: { kind: 'primitive', name: 'brand' },
+  'accent-blue': { kind: 'primitive', name: 'blue-500' },
+  'accent-green': { kind: 'primitive', name: 'green-500' },
+  'accent-magenta': { kind: 'primitive', name: 'magenta-500' },
+  'accent-yellow': { kind: 'primitive', name: 'yellow-500' },
+};
+
+/**
+ * Short-form alias map for spacing tokens.
+ *
+ * `template.spacing` exposes every `spacing-N` value, but `p-spacing-16`
+ * is verbose for the spacing scale agents use most. The aliases below map
+ * to a curated subset of the full scale, sized for the slide canvas
+ * (pt values after the spatialPxToPt 0.7× conversion).
+ *
+ * Values chosen for slide ergonomics: `xs` for tight gaps inside a card,
+ * `xl` for slide-edge breathing room.
+ */
+const SHORT_SPACING_ALIASES: Readonly<Record<string, string>> = {
+  xs: 'spacing-4',
+  sm: 'spacing-8',
+  md: 'spacing-16',
+  lg: 'spacing-32',
+  xl: 'spacing-48',
+  '2xl': 'spacing-64',
+  '3xl': 'spacing-96',
+};
+
 const flattenColors = (
   primitives: ReadonlyArray<PrimitiveColor>,
   semantics: ReadonlyArray<SemanticColor>,
@@ -151,6 +205,27 @@ const flattenColors = (
   for (const s of semantics) {
     out[`semantic.${s.name}.light`] = asHex(s.light, `semantic.${s.name}.light`);
     out[`semantic.${s.name}.dark`] = asHex(s.dark, `semantic.${s.name}.dark`);
+  }
+  // Emit short-form aliases for the brand-locked Tailwind dialect. Done last
+  // so a malformed long-form lookup is loud rather than silently falling
+  // through to a short alias.
+  const semanticByName = new Map(semantics.map((s) => [s.name, s]));
+  const primitiveByName = new Map(primitives.map((p) => [p.name, p]));
+  // Tolerant alias emission — if a referenced source token isn't in the
+  // provided token set (e.g. minimal test inputs, or a brand that doesn't
+  // ship all accent variants), skip it silently. Brand authors get every
+  // alias they have source tokens for; missing ones simply aren't emitted.
+  for (const [alias, ref] of Object.entries(SHORT_COLOR_ALIASES)) {
+    if (ref.kind === 'semantic') {
+      const s = semanticByName.get(ref.name);
+      if (!s) continue;
+      const hex = ref.theme === 'light' ? s.light : s.dark;
+      out[alias] = asHex(hex, `short-alias ${alias}`);
+    } else {
+      const p = primitiveByName.get(ref.name);
+      if (!p) continue;
+      out[alias] = asHex(p.hex, `short-alias ${alias}`);
+    }
   }
   return Object.freeze(out);
 };
@@ -191,6 +266,14 @@ const flattenSpacing = (tokens: ReadonlyArray<SpacingToken>): Readonly<Record<st
   for (const t of tokens) {
     if (t.px === null) continue;
     out[t.name] = spatialPxToPt(t.px);
+  }
+  // Emit short aliases (xs/sm/md/lg/xl/2xl/3xl) that map to a curated subset
+  // of the full spacing scale. Lets agents write `p-md` / `gap-lg` instead of
+  // `p-spacing-16` for the common cases.
+  for (const [alias, source] of Object.entries(SHORT_SPACING_ALIASES)) {
+    const value = out[source];
+    if (value === undefined) continue;
+    out[alias] = value;
   }
   return Object.freeze(out);
 };
