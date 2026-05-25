@@ -71,6 +71,11 @@ export const sanity = defineTemplate({
     mono: ['IBM Plex Mono', 'Courier New'],
   },
   ...flattenForBrand(sanityBrandTokens),
+  // Opt the brand-chrome helpers into the agent's import allowlist so
+  // Tier-2 custom components can compose with <BrandSlide>, <TopLabel>,
+  // <Chrome>, <DotGrid>, etc., matching the curated slides' visual system.
+  // The framework's brand lock still applies to imports outside this list.
+  additionalImportAllowlist: ['@sanity-labs/slides-template'],
   components: {
     Cover: defineTemplateComponent({
       component: Cover,
