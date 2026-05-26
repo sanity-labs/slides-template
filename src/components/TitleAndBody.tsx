@@ -1,6 +1,7 @@
 import type { ReactElement } from 'react';
+import { Slide } from '@sanity-labs/slides';
 import { z } from 'zod';
-import { BrandSlide, BrandText, COLORS, Label, TopLabel } from './brand.js';
+import { BrandText, COLORS, Label, TopLabel } from './brand.js';
 
 export const TitleAndBodySchema = z
   .object({
@@ -21,7 +22,7 @@ export const TitleAndBody = ({
   body,
   footer,
 }: TitleAndBodyProps): ReactElement => (
-  <BrandSlide footer={footer}>
+  <Slide layoutProps={{ footer }}>
     <TopLabel slotId="title-and-body:eyebrow">{eyebrow}</TopLabel>
     <BrandText
       rect={{ x: 24, y: 54, w: 760, h: 74 }}
@@ -45,5 +46,5 @@ export const TitleAndBody = ({
     >
       {body}
     </BrandText>
-  </BrandSlide>
+  </Slide>
 );

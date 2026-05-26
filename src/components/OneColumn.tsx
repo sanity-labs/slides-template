@@ -1,6 +1,7 @@
 import type { ReactElement } from 'react';
+import { Slide } from '@sanity-labs/slides';
 import { z } from 'zod';
-import { BrandSlide, BrandText, COLORS, DotGrid, Label, TopLabel } from './brand.js';
+import { BrandText, COLORS, DotGrid, Label, TopLabel } from './brand.js';
 
 export const OneColumnSchema = z
   .object({
@@ -21,7 +22,7 @@ export const OneColumn = ({
   body,
   footer,
 }: OneColumnProps): ReactElement => (
-  <BrandSlide footer={footer}>
+  <Slide layoutProps={{ footer }}>
     <TopLabel slotId="one-column:eyebrow">{eyebrow}</TopLabel>
     <BrandText
       rect={{ x: 24, y: 54, w: 760, h: 74 }}
@@ -46,5 +47,5 @@ export const OneColumn = ({
       {body}
     </BrandText>
     <DotGrid rect={{ x: 106, y: 218, w: 330, h: 235 }} />
-  </BrandSlide>
+  </Slide>
 );

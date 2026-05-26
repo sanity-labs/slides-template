@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@sanity-labs/slides':
-        specifier: file:/tmp/sanity-labs-slides-0.1.0.tgz
-        version: file:../../../../tmp/sanity-labs-slides-0.1.0.tgz(clsx@2.1.1)(lucide-react@0.511.0(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react-zoom-pan-pinch@4.0.3(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react@19.2.6)(vite@5.4.21(@types/node@25.9.1))
+        specifier: file:/tmp/sanity-labs-slides-0.3.0.tgz
+        version: file:../../../../tmp/sanity-labs-slides-0.3.0.tgz(clsx@2.1.1)(lucide-react@0.511.0(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react-zoom-pan-pinch@4.0.3(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react@19.2.6)(vite@5.4.21(@types/node@25.9.1))
       zod:
         specifier: ^3.23.0
         version: 3.25.76
@@ -563,9 +563,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@sanity-labs/slides@file:../../../../tmp/sanity-labs-slides-0.1.0.tgz':
-    resolution: {integrity: sha512-kW1JGbyIxoy1PdDxlc7mAkf2FiwQMkNccqaFz5kXVjJyt/PwAe0cbecfDt3Ap3cucbVMRDUOUdd0slgqUKMfcQ==, tarball: file:../../../../tmp/sanity-labs-slides-0.1.0.tgz}
-    version: 0.1.0
+  '@sanity-labs/slides@file:../../../../tmp/sanity-labs-slides-0.3.0.tgz':
+    resolution: {integrity: sha512-JF/Pow5qGX9Z0MWqrlQl2b62606eZHXbPTNZC326+F69Y5MWisQvXlXJE+9SFlhrrhL8H+yVjmeAZOjvKoF/IQ==, tarball: file:../../../../tmp/sanity-labs-slides-0.3.0.tgz}
+    version: 0.3.0
     engines: {node: '>=20'}
     hasBin: true
     peerDependencies:
@@ -1744,7 +1744,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.60.4':
     optional: true
 
-  '@sanity-labs/slides@file:../../../../tmp/sanity-labs-slides-0.1.0.tgz(clsx@2.1.1)(lucide-react@0.511.0(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react-zoom-pan-pinch@4.0.3(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react@19.2.6)(vite@5.4.21(@types/node@25.9.1))':
+  '@sanity-labs/slides@file:../../../../tmp/sanity-labs-slides-0.3.0.tgz(clsx@2.1.1)(lucide-react@0.511.0(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react-zoom-pan-pinch@4.0.3(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react@19.2.6)(vite@5.4.21(@types/node@25.9.1))':
     dependencies:
       '@modelcontextprotocol/sdk': 1.29.0(zod@3.25.76)
       '@oclif/core': 4.11.4

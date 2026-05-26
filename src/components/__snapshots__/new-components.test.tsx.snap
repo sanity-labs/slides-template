@@ -832,35 +832,6 @@ exports[`<OneColumn/> goldens > minimal: title + body > one-column minimal ops 1
     "slideId": "slide_1",
     "type": "createShape",
   },
-  {
-    "objectId": "shape_9",
-    "text": "SANITY INC - 2026",
-    "type": "insertText",
-  },
-  {
-    "objectId": "shape_9",
-    "range": {
-      "end": 17,
-      "start": 0,
-    },
-    "style": {
-      "fontFamily": "IBM Plex Mono",
-      "fontSize": 10,
-      "foregroundColor": "#b9b9b9",
-    },
-    "type": "updateTextStyle",
-  },
-  {
-    "objectId": "shape_9",
-    "range": {
-      "end": 17,
-      "start": 0,
-    },
-    "style": {
-      "alignment": "END",
-    },
-    "type": "updateParagraphStyle",
-  },
 ]
 `;
 
@@ -1330,35 +1301,6 @@ exports[`<TitleAndBody/> goldens > minimal: title + body > title-and-body minima
     "slideId": "slide_1",
     "type": "createShape",
   },
-  {
-    "objectId": "shape_8",
-    "text": "SANITY INC - 2026",
-    "type": "insertText",
-  },
-  {
-    "objectId": "shape_8",
-    "range": {
-      "end": 17,
-      "start": 0,
-    },
-    "style": {
-      "fontFamily": "IBM Plex Mono",
-      "fontSize": 10,
-      "foregroundColor": "#b9b9b9",
-    },
-    "type": "updateTextStyle",
-  },
-  {
-    "objectId": "shape_8",
-    "range": {
-      "end": 17,
-      "start": 0,
-    },
-    "style": {
-      "alignment": "END",
-    },
-    "type": "updateParagraphStyle",
-  },
 ]
 `;
 
@@ -1676,35 +1618,6 @@ exports[`<TitleAndGrid/> goldens > 2×1 grid of fields > title-and-grid 2x1 ops 
     "shapeId": "shape_12",
     "slideId": "slide_1",
     "type": "createShape",
-  },
-  {
-    "objectId": "shape_12",
-    "text": "SANITY INC - 2026",
-    "type": "insertText",
-  },
-  {
-    "objectId": "shape_12",
-    "range": {
-      "end": 17,
-      "start": 0,
-    },
-    "style": {
-      "fontFamily": "IBM Plex Mono",
-      "fontSize": 10,
-      "foregroundColor": "#b9b9b9",
-    },
-    "type": "updateTextStyle",
-  },
-  {
-    "objectId": "shape_12",
-    "range": {
-      "end": 17,
-      "start": 0,
-    },
-    "style": {
-      "alignment": "END",
-    },
-    "type": "updateParagraphStyle",
   },
 ]
 `;
@@ -2359,35 +2272,6 @@ exports[`<TitleAndGrid/> goldens > 3×2 grid of fields > title-and-grid 3x2 ops 
     "shapeId": "shape_24",
     "slideId": "slide_1",
     "type": "createShape",
-  },
-  {
-    "objectId": "shape_24",
-    "text": "SANITY INC - 2026",
-    "type": "insertText",
-  },
-  {
-    "objectId": "shape_24",
-    "range": {
-      "end": 17,
-      "start": 0,
-    },
-    "style": {
-      "fontFamily": "IBM Plex Mono",
-      "fontSize": 10,
-      "foregroundColor": "#b9b9b9",
-    },
-    "type": "updateTextStyle",
-  },
-  {
-    "objectId": "shape_24",
-    "range": {
-      "end": 17,
-      "start": 0,
-    },
-    "style": {
-      "alignment": "END",
-    },
-    "type": "updateParagraphStyle",
   },
 ]
 `;

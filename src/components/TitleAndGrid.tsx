@@ -1,8 +1,7 @@
 import type { ReactElement } from 'react';
-import { type SlotId } from '@sanity-labs/slides';
+import { Slide, type SlotId } from '@sanity-labs/slides';
 import { z } from 'zod';
 import {
-  BrandSlide,
   BrandText,
   COLORS,
   DotGrid,
@@ -148,7 +147,7 @@ export const TitleAndGrid = ({
   const rowLayout = cols === 1 && rowCount > 1;
 
   return (
-    <BrandSlide footer={footer}>
+    <Slide layoutProps={{ footer }}>
       <TopLabel slotId={slotIdOrUndefined(slotPrefix, 'eyebrow')}>{eyebrow}</TopLabel>
       <BrandText
         rect={{ x: 24, y: 54, w: 760, h: 74 }}
@@ -176,6 +175,6 @@ export const TitleAndGrid = ({
           />
         );
       })}
-    </BrandSlide>
+    </Slide>
   );
 };

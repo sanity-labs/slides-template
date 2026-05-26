@@ -1,6 +1,7 @@
 import type { ReactElement } from 'react';
+import { Slide } from '@sanity-labs/slides';
 import { z } from 'zod';
-import { BrandSlide, BrandText, COLORS, TopLabel } from './brand.js';
+import { BrandText, COLORS, TopLabel } from './brand.js';
 
 export const CoverSchema = z
   .object({
@@ -16,7 +17,7 @@ export const CoverSchema = z
 type CoverProps = z.infer<typeof CoverSchema>;
 
 export const Cover = ({ title, subtitle, eyebrow = 'EYEBROW' }: CoverProps): ReactElement => (
-  <BrandSlide lockup>
+  <Slide layoutProps={{ lockup: true }}>
     <TopLabel slotId="cover:eyebrow">{eyebrow}</TopLabel>
     <BrandText
       rect={{ x: 24, y: 56, w: 700, h: 146 }}
@@ -39,5 +40,5 @@ export const Cover = ({ title, subtitle, eyebrow = 'EYEBROW' }: CoverProps): Rea
         {subtitle}
       </BrandText>
     )}
-  </BrandSlide>
+  </Slide>
 );

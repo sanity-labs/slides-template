@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react';
-import { type SlotId } from '@sanity-labs/slides';
+import { Slide, type SlotId } from '@sanity-labs/slides';
 import { z } from 'zod';
-import { BrandSlide, BrandText, COLORS, DotGrid, TopLabel } from './brand.js';
+import { BrandText, COLORS, DotGrid, TopLabel } from './brand.js';
 
 export const SectionDividerSchema = z
   .object({
@@ -39,7 +39,7 @@ export const SectionDivider = ({
     slotPrefix === undefined ? undefined : (`${slotPrefix}:${name}` as SlotId);
 
   return (
-    <BrandSlide tone={tone}>
+    <Slide layoutProps={{ tone }}>
       {variant === 'dot-grid' ? <DotGrid rect={{ x: 24, y: 44, w: 900, h: 390 }} /> : null}
       {eyebrow === undefined ? null : (
         <TopLabel tone={tone} slotId={slot('eyebrow')}>
@@ -55,6 +55,6 @@ export const SectionDivider = ({
       >
         {title}
       </BrandText>
-    </BrandSlide>
+    </Slide>
   );
 };
