@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react';
-import { Image } from '@sanity-labs/slides';
+import { Image, Slide } from '@sanity-labs/slides';
 import { z } from 'zod';
-import { BRAND_IMAGES, BrandSlide, BrandText, COLORS, TopLabel } from './brand.js';
+import { BRAND_IMAGES, BrandText, COLORS, TopLabel } from './brand.js';
 
 export const ClosingSchema = z
   .object({
@@ -21,7 +21,7 @@ export const Closing = ({
   title = 'QnA',
   eyebrow = 'THANK YOU',
 }: ClosingProps): ReactElement => (
-  <BrandSlide tone="brand" lockup footer={null}>
+  <Slide layoutProps={{ tone: 'brand', lockup: true, footer: null }}>
     <Image
       rect={{ x: 240, y: 0, w: 720, h: 540 }}
       image={BRAND_IMAGES.closingMark}
@@ -50,5 +50,5 @@ export const Closing = ({
         {slideNumber}
       </BrandText>
     )}
-  </BrandSlide>
+  </Slide>
 );

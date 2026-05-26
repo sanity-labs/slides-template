@@ -217,15 +217,21 @@ demo, video, guest speaker, interactive moment.
 
 ## 6. Chrome
 
-Every slide gets automatic brand chrome via the `BrandSlide` wrapper:
+Every slide gets automatic brand chrome via the framework's `Slide` layout
+system. You don't write the chrome — the template injects it around every
+`<Slide>`'s content:
 
 - **Bottom-left:** Sanity mark (squiggle icon) on content slides, full lockup
-  (icon + "Sanity" wordmark) on Cover and Closing
-- **Bottom-right:** "SANITY INC - 2026" in IBM Plex Mono
-- **Do not** add logos or footers manually — the chrome is built into every component
+  (icon + "Sanity" wordmark) on Cover and Closing — controlled by `lockup: true`
+- **Bottom-right:** "SANITY INC - 2026" in IBM Plex Mono — pass `footer: null` to hide
+- **Background:** controlled by `tone` (`'dark'` default, `'brand'` for OrangeRed, `'blue'`)
+
+Customise per slide via `<Slide layoutProps={{ tone, lockup, footer }}>`. Defaults are
+correct for normal content slides; only set props when you need a Cover (`lockup: true`),
+SectionDivider (`tone: 'brand' | 'blue'`), or Closing (`tone: 'brand', lockup: true, footer: null`).
 
 Logo and footer color follow the background: white on dark, Sanity Black on
-OrangeRed/blue/secondary backgrounds.
+OrangeRed/blue/secondary backgrounds. The layout handles this automatically.
 
 ---
 
@@ -243,23 +249,40 @@ OrangeRed/blue/secondary backgrounds.
 
 ## 8. Custom components (tier 2)
 
-When writing custom components with `slides_add_component`, import chrome
-helpers from the template:
+Custom components just declare their content — the chrome (background, logo,
+footer) is injected by the framework automatically. You don't need any
+template-specific imports for that.
 
 ```tsx
-import {
-  BrandSlide, BrandText, COLORS, Label, TopLabel,
-  DotGrid, DottedRule, Chrome, Background,
-} from '@sanity-labs/slides-template';
+import { Slide, Box, Text } from '@sanity-labs/slides';
+import { z } from 'zod';
+
+export const MyMetricSchema = z.object({ value: z.string(), label: z.string() }).strict();
+
+export const MyMetric = ({ value, label }) => (
+  // No background, no logo, no footer — the layout adds all that.
+  <Slide className="flex flex-col gap-md justify-center">
+    <Box className="text-role-title">{value}</Box>
+    <Box className="text-role-eyebrow">{label}</Box>
+  </Slide>
+);
 ```
 
-- **Always wrap content in `<BrandSlide>`** — provides background, logo, footer
-- Use `<TopLabel>` for eyebrows (top-left, mono, gray)
-- Use `<BrandText>` with explicit `rect`, `size`, and `color` for all text
-- Use `COLORS.white` for titles/body on dark slides, `COLORS.gray300` for muted labels
-- Use `<DottedRule>` and `<DotGrid>` for brand texture patterns
-- **Never** use hex color literals — always `COLORS.*`
-- Text is Sanity Black or White only — never OrangeRed, never secondary colors
+If you need brand texture (dot-grid, dotted rules) or the typed helper components,
+import them from the template helpers package:
+
+```tsx
+import { BrandText, COLORS, DotGrid, DottedRule, Label, TopLabel } from '@sanity-labs/slides-template';
+```
+
+- **Don't** wrap content in any "BrandSlide" — that's gone. Just use `<Slide>`.
+- Use `<Slide layoutProps={{ tone: 'brand' }}>` for a colored background on this slide.
+- Use `<Slide noLayout>` only for true full-bleed slides where chrome would interfere.
+- Use `<TopLabel>` for eyebrows (top-left, mono, gray) when you want the canonical position.
+- Use `text-role-title` / `text-role-body` / `text-role-eyebrow` for typographic consistency.
+- Use `COLORS.white` / `COLORS.gray300` only when className tokens aren't expressive enough.
+- **Never** use hex color literals — always brand tokens.
+- Text is Sanity Black or White only — never OrangeRed, never secondary colors.
 
 ---
 
@@ -276,3 +299,18 @@ These patterns signal "a model wrote this deck." Avoid them:
 - **Repeating the same component** for every slide — use the right type for each
 - **`font-bold` everywhere** — reserve weight for cases where size isn't enough
 - **Solid color cards without breathing room** — decks need whitespace
+
+---
+
+## 10. Visual review
+
+After composing slides, call `slides_preview` to see PNG renders of every slide.
+Check for:
+
+- Text running past box boundaries (especially on TitleAndGrid cells)
+- White text on white backgrounds or black text on black backgrounds
+- Missing chrome (logo or footer not visible)
+- Dot-grid textures render as gray placeholders in the preview — that's expected
+- Body text too small to read at projection distance
+
+Fix issues via `slides_edit_component` and re-preview before calling `slides_create`.

@@ -2,7 +2,6 @@ import type { ReactElement, ReactNode } from 'react';
 import {
   Box,
   Image,
-  Slide,
   Text,
   type ArtifactRef,
   type HexColor,
@@ -162,23 +161,6 @@ export type ChromeProps = {
   readonly lockup?: boolean;
   readonly footer?: string | null;
 };
-
-export type BrandSlideProps = ChromeProps & {
-  readonly children?: ReactNode;
-};
-
-export const BrandSlide = ({
-  tone = 'dark',
-  lockup = false,
-  footer = 'SANITY INC - 2026',
-  children,
-}: BrandSlideProps): ReactElement => (
-  <Slide>
-    <Background tone={tone} />
-    {children}
-    <Chrome tone={tone} lockup={lockup} footer={footer} />
-  </Slide>
-);
 
 export type BrandTextProps = {
   readonly rect: Rect;

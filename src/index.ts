@@ -34,6 +34,7 @@ import { Closing, ClosingSchema } from './components/Closing.js';
 import { flattenForBrand } from './flatten-for-brand.js';
 import { preview } from './preview.js';
 import { sanityBrandTokens } from './tokens.js';
+import { SanityLayout } from './layout.js';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const skill = readFileSync(resolve(HERE, 'SKILL.md'), 'utf8');
@@ -163,6 +164,7 @@ export const sanity = defineTemplate({
   },
   preview,
   skill,
+  layout: SanityLayout,
 });
 
 // Brand chrome helpers — callers can compose new slide types without
@@ -170,7 +172,6 @@ export const sanity = defineTemplate({
 export {
   BRAND_IMAGES,
   Background,
-  BrandSlide,
   BrandText,
   CANVAS,
   COLORS,
@@ -179,7 +180,6 @@ export {
   DottedRule,
   Label,
   TopLabel,
-  type BrandSlideProps,
   type BrandTextProps,
   type BrandTone,
   type ChromeProps,

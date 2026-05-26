@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react';
-import { Box } from '@sanity-labs/slides';
+import { Box, Slide } from '@sanity-labs/slides';
 import { z } from 'zod';
-import { BrandSlide, BrandText, COLORS, DotGrid, TopLabel } from './brand.js';
+import { BrandText, COLORS, DotGrid, TopLabel } from './brand.js';
 
 export const DemoSchema = z
   .object({
@@ -13,7 +13,7 @@ export const DemoSchema = z
 type DemoProps = z.infer<typeof DemoSchema>;
 
 export const Demo = ({ eyebrow = 'EYEBROW', label = '[ DEMO ]' }: DemoProps): ReactElement => (
-  <BrandSlide>
+  <Slide>
     <TopLabel slotId="demo:eyebrow">{eyebrow}</TopLabel>
     <DotGrid rect={{ x: 24, y: 44, w: 900, h: 430 }} />
     <Box rect={{ x: 326, y: 184, w: 340, h: 150 }} fill={{ kind: 'solid', color: COLORS.black }} />
@@ -27,5 +27,5 @@ export const Demo = ({ eyebrow = 'EYEBROW', label = '[ DEMO ]' }: DemoProps): Re
     >
       {label}
     </BrandText>
-  </BrandSlide>
+  </Slide>
 );

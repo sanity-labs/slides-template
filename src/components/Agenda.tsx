@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react';
-import { type SlotId } from '@sanity-labs/slides';
+import { Slide, type SlotId } from '@sanity-labs/slides';
 import { z } from 'zod';
-import { BrandSlide, BrandText, COLORS, DottedRule, TopLabel, type Rect } from './brand.js';
+import { BrandText, COLORS, DottedRule, TopLabel, type Rect } from './brand.js';
 
 const slotIdOrUndefined = (slotPrefix: string | undefined, name: string): SlotId | undefined =>
   slotPrefix === undefined ? undefined : (`${slotPrefix}:${name}` as SlotId);
@@ -122,7 +122,7 @@ export const Agenda = ({
   const label = eyebrow ?? (variant === 'detailed' ? 'AGENDA DETAILED' : 'AGENDA');
 
   return (
-    <BrandSlide>
+    <Slide>
       <TopLabel slotId={slotIdOrUndefined(slotPrefix, 'eyebrow')}>{label}</TopLabel>
       {items.map((item, index) =>
         variant === 'detailed' ? (
@@ -131,6 +131,6 @@ export const Agenda = ({
           <SimpleRow key={index} item={item} index={index} slotPrefix={slotPrefix} />
         ),
       )}
-    </BrandSlide>
+    </Slide>
   );
 };
