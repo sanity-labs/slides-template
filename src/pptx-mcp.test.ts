@@ -89,3 +89,64 @@ describe('slides_create integration (Sanity template)', () => {
     }
   }, 30_000);
 });
+
+describe('slides_guidelines (Sanity template)', () => {
+  it('returns the Sanity design guidelines', async () => {
+    const dir = await fs.mkdtemp(path.join(os.tmpdir(), 'sanity-mcp-skill-'));
+    try {
+      const runtime = new PptxSlidesRuntime({ outputDir: dir });
+      const server = createSlideServer({ template: sanity, runtime });
+      const [clientTransport, serverTransport] = InMemoryTransport.createLinkedPair();
+      await server.connect(serverTransport);
+      const client = new Client({ name: 'test', version: '0.0.0' });
+      await client.connect(clientTransport);
+
+      const response = await client.callTool({
+        name: 'slides_guidelines',
+        arguments: {},
+      });
+
+      expect(response.isError).toBeFalsy();
+      const sc = response.structuredContent as {
+        template: string;
+        hasGuidelines: boolean;
+        guidelines: string | null;
+      };
+      expect(sc.template).toBe('sanity');
+      expect(sc.hasGuidelines).toBe(true);
+      expect(sc.guidelines).toContain('Sanity Slide Template');
+      expect(sc.guidelines).toContain('Always start with `Cover`');
+      expect(sc.guidelines).toContain('SectionDivider');
+
+      await server.close();
+    } finally {
+      await fs.rm(dir, { recursive: true, force: true });
+    }
+  }, 30_000);
+
+  it('slides_list hints about guidelines availability', async () => {
+    const dir = await fs.mkdtemp(path.join(os.tmpdir(), 'sanity-mcp-hint-'));
+    try {
+      const runtime = new PptxSlidesRuntime({ outputDir: dir });
+      const server = createSlideServer({ template: sanity, runtime });
+      const [clientTransport, serverTransport] = InMemoryTransport.createLinkedPair();
+      await server.connect(serverTransport);
+      const client = new Client({ name: 'test', version: '0.0.0' });
+      await client.connect(clientTransport);
+
+      const response = await client.callTool({
+        name: 'slides_list',
+        arguments: {},
+      });
+
+      expect(response.isError).toBeFalsy();
+      const text = (response.content as Array<{ text: string }>)[0]?.text ?? '';
+      expect(text).toContain('slides_guidelines');
+      expect(text).toContain('design guidelines');
+
+      await server.close();
+    } finally {
+      await fs.rm(dir, { recursive: true, force: true });
+    }
+  }, 30_000);
+});

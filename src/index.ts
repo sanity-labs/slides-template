@@ -19,6 +19,9 @@
  *   - `@sanity-labs/slides/sanity` — everything in this file (Template, helpers, brand-asset refs)
  */
 
+import { readFileSync } from 'node:fs';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { CANVAS_16_9, defineTemplate, defineTemplateComponent } from '@sanity-labs/slides';
 import { Agenda, AgendaSchema } from './components/Agenda.js';
 import { Cover, CoverSchema } from './components/Cover.js';
@@ -31,6 +34,9 @@ import { Closing, ClosingSchema } from './components/Closing.js';
 import { flattenForBrand } from './flatten-for-brand.js';
 import { preview } from './preview.js';
 import { sanityBrandTokens } from './tokens.js';
+
+const HERE = dirname(fileURLToPath(import.meta.url));
+const skill = readFileSync(resolve(HERE, 'SKILL.md'), 'utf8');
 
 /**
  * PPTX font substitution map for the Sanity brand.
@@ -70,7 +76,36 @@ export const sanity = defineTemplate({
     body: ['Arial', 'Helvetica', 'Geist', 'Inter'],
     mono: ['IBM Plex Mono', 'Courier New'],
   },
-  ...flattenForBrand(sanityBrandTokens),
+  ...(() => {
+    const flat = flattenForBrand(sanityBrandTokens);
+    return {
+      ...flat,
+      colors: {
+        ...flat.colors,
+        // Short-form aliases for agent-authored Tier-2 components.
+        // These make className usage natural: `bg-black`, `text-white`,
+        // `bg-brand`, `bg-blue` instead of `bg-primitive.black` etc.
+        black: '#0b0b0b',
+        white: '#ffffff',
+        brand: '#ff5500',
+        blue: '#027fff',
+        'gray-100': '#ededed',
+        'gray-200': '#d6d6d6',
+        'gray-300': '#b9b9b9',
+        'gray-500': '#797979',
+        'gray-700': '#4a4a4a',
+        'gray-800': '#353535',
+        'gray-900': '#212121',
+        // Semantic aliases that match the Tailwind mental model.
+        'fg-base': '#0b0b0b',
+        'fg-muted': '#4a4a4a',
+        'fg-dim': '#797979',
+        'bg-base': '#0b0b0b',
+        'bg-surface': '#ffffff',
+        accent: '#ff5500',
+      },
+    };
+  })(),
   // Opt the brand-chrome helpers into the agent's import allowlist so
   // Tier-2 custom components can compose with <BrandSlide>, <TopLabel>,
   // <Chrome>, <DotGrid>, etc., matching the curated slides' visual system.
@@ -127,6 +162,7 @@ export const sanity = defineTemplate({
     }),
   },
   preview,
+  skill,
 });
 
 // Brand chrome helpers — callers can compose new slide types without

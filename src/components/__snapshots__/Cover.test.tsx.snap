@@ -6,7 +6,7 @@ exports[`<Cover/> goldens > full: title + subtitle + custom eyebrow > manifest 1
     {
       "identifier": "sanity-lockup-white-on-black",
       "resolvedAt": "2026-05-04T00:00:00.000Z",
-      "resolvedUrl": "/Users/rostimelk/Projects/react-gslides/packages/slides/src/sanity/assets/sanity-lockup-white-on-black.png",
+      "resolvedUrl": "/Users/rostimelk/Projects/slides-template/src/assets/sanity-lockup-white-on-black.png",
       "type": "logo",
     },
   ],
@@ -165,14 +165,14 @@ exports[`<Cover/> goldens > full: title + subtitle + custom eyebrow > ops 1`] = 
     "altText": "Sanity logo",
     "imageId": "image_6",
     "rect": {
-      "h": 365760,
-      "w": 1463040,
+      "h": 368300,
+      "w": 1460500,
       "x": 304800,
-      "y": 6238113,
+      "y": 6235700,
     },
     "slideId": "slide_1",
     "type": "createImage",
-    "url": "/Users/rostimelk/Projects/react-gslides/packages/slides/src/sanity/assets/sanity-lockup-white-on-black.png",
+    "url": "/Users/rostimelk/Projects/slides-template/src/assets/sanity-lockup-white-on-black.png",
   },
   {
     "rect": {
@@ -224,7 +224,7 @@ exports[`<Cover/> goldens > minimum: title only > manifest 1`] = `
     {
       "identifier": "sanity-lockup-white-on-black",
       "resolvedAt": "2026-05-04T00:00:00.000Z",
-      "resolvedUrl": "/Users/rostimelk/Projects/react-gslides/packages/slides/src/sanity/assets/sanity-lockup-white-on-black.png",
+      "resolvedUrl": "/Users/rostimelk/Projects/slides-template/src/assets/sanity-lockup-white-on-black.png",
       "type": "logo",
     },
   ],
@@ -341,14 +341,14 @@ exports[`<Cover/> goldens > minimum: title only > ops 1`] = `
     "altText": "Sanity logo",
     "imageId": "image_5",
     "rect": {
-      "h": 365760,
-      "w": 1463040,
+      "h": 368300,
+      "w": 1460500,
       "x": 304800,
-      "y": 6238113,
+      "y": 6235700,
     },
     "slideId": "slide_1",
     "type": "createImage",
-    "url": "/Users/rostimelk/Projects/react-gslides/packages/slides/src/sanity/assets/sanity-lockup-white-on-black.png",
+    "url": "/Users/rostimelk/Projects/slides-template/src/assets/sanity-lockup-white-on-black.png",
   },
   {
     "rect": {
