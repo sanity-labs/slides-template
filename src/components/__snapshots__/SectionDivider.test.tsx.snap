@@ -6,7 +6,7 @@ exports[`<SectionDivider/> goldens — blue > with eyebrow > blue with-eyebrow m
     {
       "identifier": "sanity-mark-black-on-blue",
       "resolvedAt": "2026-05-04T00:00:00.000Z",
-      "resolvedUrl": "/Users/rostimelk/Projects/react-gslides/packages/slides/src/sanity/assets/sanity-mark-black-on-blue.png",
+      "resolvedUrl": "/Users/rostimelk/Projects/slides-template/src/assets/sanity-mark-black-on-blue.png",
       "type": "logo",
     },
   ],
@@ -120,14 +120,14 @@ exports[`<SectionDivider/> goldens — blue > with eyebrow > blue with-eyebrow o
     "altText": "Sanity mark",
     "imageId": "image_5",
     "rect": {
-      "h": 347472,
-      "w": 426720,
+      "h": 342900,
+      "w": 431800,
       "x": 304800,
-      "y": 6209411,
+      "y": 6210300,
     },
     "slideId": "slide_1",
     "type": "createImage",
-    "url": "/Users/rostimelk/Projects/react-gslides/packages/slides/src/sanity/assets/sanity-mark-black-on-blue.png",
+    "url": "/Users/rostimelk/Projects/slides-template/src/assets/sanity-mark-black-on-blue.png",
   },
   {
     "rect": {
@@ -179,7 +179,7 @@ exports[`<SectionDivider/> goldens — blue > without eyebrow > blue bare manife
     {
       "identifier": "sanity-mark-black-on-blue",
       "resolvedAt": "2026-05-04T00:00:00.000Z",
-      "resolvedUrl": "/Users/rostimelk/Projects/react-gslides/packages/slides/src/sanity/assets/sanity-mark-black-on-blue.png",
+      "resolvedUrl": "/Users/rostimelk/Projects/slides-template/src/assets/sanity-mark-black-on-blue.png",
       "type": "logo",
     },
   ],
@@ -263,14 +263,14 @@ exports[`<SectionDivider/> goldens — blue > without eyebrow > blue bare ops 1`
     "altText": "Sanity mark",
     "imageId": "image_4",
     "rect": {
-      "h": 347472,
-      "w": 426720,
+      "h": 342900,
+      "w": 431800,
       "x": 304800,
-      "y": 6209411,
+      "y": 6210300,
     },
     "slideId": "slide_1",
     "type": "createImage",
-    "url": "/Users/rostimelk/Projects/react-gslides/packages/slides/src/sanity/assets/sanity-mark-black-on-blue.png",
+    "url": "/Users/rostimelk/Projects/slides-template/src/assets/sanity-mark-black-on-blue.png",
   },
   {
     "rect": {
@@ -328,7 +328,7 @@ exports[`<SectionDivider/> goldens — dot-grid > with eyebrow > dot-grid with-e
     {
       "identifier": "sanity-mark-white-on-black",
       "resolvedAt": "2026-05-04T00:00:00.000Z",
-      "resolvedUrl": "/Users/rostimelk/Projects/react-gslides/packages/slides/src/sanity/assets/sanity-mark-white-on-black.png",
+      "resolvedUrl": "/Users/rostimelk/Projects/slides-template/src/assets/sanity-mark-white-on-black.png",
       "type": "logo",
     },
   ],
@@ -455,14 +455,14 @@ exports[`<SectionDivider/> goldens — dot-grid > with eyebrow > dot-grid with-e
     "altText": "Sanity mark",
     "imageId": "image_6",
     "rect": {
-      "h": 347472,
-      "w": 426720,
+      "h": 342900,
+      "w": 431800,
       "x": 304800,
-      "y": 6209411,
+      "y": 6210300,
     },
     "slideId": "slide_1",
     "type": "createImage",
-    "url": "/Users/rostimelk/Projects/react-gslides/packages/slides/src/sanity/assets/sanity-mark-white-on-black.png",
+    "url": "/Users/rostimelk/Projects/slides-template/src/assets/sanity-mark-white-on-black.png",
   },
   {
     "rect": {
@@ -520,7 +520,7 @@ exports[`<SectionDivider/> goldens — dot-grid > without eyebrow > dot-grid bar
     {
       "identifier": "sanity-mark-white-on-black",
       "resolvedAt": "2026-05-04T00:00:00.000Z",
-      "resolvedUrl": "/Users/rostimelk/Projects/react-gslides/packages/slides/src/sanity/assets/sanity-mark-white-on-black.png",
+      "resolvedUrl": "/Users/rostimelk/Projects/slides-template/src/assets/sanity-mark-white-on-black.png",
       "type": "logo",
     },
   ],
@@ -617,14 +617,14 @@ exports[`<SectionDivider/> goldens — dot-grid > without eyebrow > dot-grid bar
     "altText": "Sanity mark",
     "imageId": "image_5",
     "rect": {
-      "h": 347472,
-      "w": 426720,
+      "h": 342900,
+      "w": 431800,
       "x": 304800,
-      "y": 6209411,
+      "y": 6210300,
     },
     "slideId": "slide_1",
     "type": "createImage",
-    "url": "/Users/rostimelk/Projects/react-gslides/packages/slides/src/sanity/assets/sanity-mark-white-on-black.png",
+    "url": "/Users/rostimelk/Projects/slides-template/src/assets/sanity-mark-white-on-black.png",
   },
   {
     "rect": {
@@ -676,7 +676,7 @@ exports[`<SectionDivider/> goldens — orange-red > with eyebrow > orange-red wi
     {
       "identifier": "sanity-mark-black-on-brand",
       "resolvedAt": "2026-05-04T00:00:00.000Z",
-      "resolvedUrl": "/Users/rostimelk/Projects/react-gslides/packages/slides/src/sanity/assets/sanity-mark-black-on-brand.png",
+      "resolvedUrl": "/Users/rostimelk/Projects/slides-template/src/assets/sanity-mark-black-on-brand.png",
       "type": "logo",
     },
   ],
@@ -790,14 +790,14 @@ exports[`<SectionDivider/> goldens — orange-red > with eyebrow > orange-red wi
     "altText": "Sanity mark",
     "imageId": "image_5",
     "rect": {
-      "h": 347472,
-      "w": 426720,
+      "h": 342900,
+      "w": 431800,
       "x": 304800,
-      "y": 6209411,
+      "y": 6210300,
     },
     "slideId": "slide_1",
     "type": "createImage",
-    "url": "/Users/rostimelk/Projects/react-gslides/packages/slides/src/sanity/assets/sanity-mark-black-on-brand.png",
+    "url": "/Users/rostimelk/Projects/slides-template/src/assets/sanity-mark-black-on-brand.png",
   },
   {
     "rect": {
@@ -849,7 +849,7 @@ exports[`<SectionDivider/> goldens — orange-red > without eyebrow > orange-red
     {
       "identifier": "sanity-mark-black-on-brand",
       "resolvedAt": "2026-05-04T00:00:00.000Z",
-      "resolvedUrl": "/Users/rostimelk/Projects/react-gslides/packages/slides/src/sanity/assets/sanity-mark-black-on-brand.png",
+      "resolvedUrl": "/Users/rostimelk/Projects/slides-template/src/assets/sanity-mark-black-on-brand.png",
       "type": "logo",
     },
   ],
@@ -933,14 +933,14 @@ exports[`<SectionDivider/> goldens — orange-red > without eyebrow > orange-red
     "altText": "Sanity mark",
     "imageId": "image_4",
     "rect": {
-      "h": 347472,
-      "w": 426720,
+      "h": 342900,
+      "w": 431800,
       "x": 304800,
-      "y": 6209411,
+      "y": 6210300,
     },
     "slideId": "slide_1",
     "type": "createImage",
-    "url": "/Users/rostimelk/Projects/react-gslides/packages/slides/src/sanity/assets/sanity-mark-black-on-brand.png",
+    "url": "/Users/rostimelk/Projects/slides-template/src/assets/sanity-mark-black-on-brand.png",
   },
   {
     "rect": {

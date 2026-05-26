@@ -5,20 +5,23 @@
   "type": "module",
   "main": "./src/index.ts",
   "scripts": {
-    "build": "tsc -p tsconfig.build.json && node -e \"require('node:fs').cpSync('src/assets','dist/assets',{recursive:true})\"",
+    "build": "tsc -p tsconfig.build.json && node -e \"require('node:fs').cpSync('src/assets','dist/assets',{recursive:true})\" && node -e \"require('node:fs').cpSync('src/SKILL.md','dist/SKILL.md')\"",
     "dev": "slides-dev",
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "test": "vitest run"
   },
   "dependencies": {
-    "@sanity-labs/slides": "*",
+    "@sanity-labs/slides": "file:/tmp/sanity-labs-slides-0.1.0.tgz",
     "zod": "^3.23.0"
   },
   "devDependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0",
     "@types/node": "^25.9.1",
     "@types/react": "^19.0.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.511.0",
     "react": "^19.0.0",
+    "react-zoom-pan-pinch": "^4.0.3",
     "typescript": "5.9.3",
     "vitest": "2.1.9"
   }
