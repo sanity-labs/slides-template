@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react';
-import { Slide } from '@sanity-labs/slides';
+import { Box, Slide } from '@sanity-labs/slides';
 import { z } from 'zod';
-import { BrandText, COLORS, DotGrid, Label, TopLabel } from './brand.js';
+import { DotGrid } from './brand.js';
 
 export const OneColumnSchema = z
   .object({
@@ -22,30 +22,21 @@ export const OneColumn = ({
   body,
   footer,
 }: OneColumnProps): ReactElement => (
-  <Slide layoutProps={{ footer }}>
-    <TopLabel slotId="one-column:eyebrow">{eyebrow}</TopLabel>
-    <BrandText
-      rect={{ x: 24, y: 54, w: 760, h: 74 }}
-      size={44}
-      color={COLORS.white}
-      lineSpacing={1.05}
-      slotId="one-column:title"
-    >
+  <Slide layoutProps={{ footer }} className="flex flex-col p-6 gap-3">
+    <Box className="text-role-eyebrow text-gray-300" slotId="one-column:eyebrow">
+      {eyebrow}
+    </Box>
+    <Box className="text-role-title text-white" slotId="one-column:title">
       {title}
-    </BrandText>
-    <Label rect={{ x: 106, y: 134, w: 330, h: 20 }} slotId="one-column:body-eyebrow">
-      {bodyEyebrow}
-    </Label>
-    <BrandText
-      rect={{ x: 106, y: 155, w: 330, h: 66 }}
-      size={16}
-      color={COLORS.white}
-      font="body"
-      lineSpacing={1.28}
-      slotId="one-column:body"
-    >
-      {body}
-    </BrandText>
+    </Box>
+    <Box className="flex flex-col gap-2 pt-6 pl-12 w-1/3">
+      <Box className="text-role-eyebrow text-gray-300" slotId="one-column:body-eyebrow">
+        {bodyEyebrow}
+      </Box>
+      <Box className="text-role-body-sm text-white" slotId="one-column:body">
+        {body}
+      </Box>
+    </Box>
     <DotGrid rect={{ x: 106, y: 218, w: 330, h: 235 }} />
   </Slide>
 );

@@ -47,10 +47,10 @@ exports[`<SectionDivider/> goldens — blue > with eyebrow > blue with-eyebrow o
   },
   {
     "rect": {
-      "h": 228600,
-      "w": 5334000,
+      "h": 165100,
+      "w": 11582400,
       "x": 304800,
-      "y": 317500,
+      "y": 304800,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_3",
@@ -77,10 +77,10 @@ exports[`<SectionDivider/> goldens — blue > with eyebrow > blue with-eyebrow o
   },
   {
     "rect": {
-      "h": 1905000,
-      "w": 9906000,
+      "h": 990600,
+      "w": 11582400,
       "x": 304800,
-      "y": 736600,
+      "y": 622300,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_4",
@@ -104,17 +104,6 @@ exports[`<SectionDivider/> goldens — blue > with eyebrow > blue with-eyebrow o
       "foregroundColor": "#0b0b0b",
     },
     "type": "updateTextStyle",
-  },
-  {
-    "objectId": "shape_4",
-    "range": {
-      "end": 9,
-      "start": 0,
-    },
-    "style": {
-      "lineSpacing": 1.05,
-    },
-    "type": "updateParagraphStyle",
   },
   {
     "altText": "Sanity mark",
@@ -220,10 +209,10 @@ exports[`<SectionDivider/> goldens — blue > without eyebrow > blue bare ops 1`
   },
   {
     "rect": {
-      "h": 1905000,
-      "w": 9906000,
+      "h": 990600,
+      "w": 11582400,
       "x": 304800,
-      "y": 736600,
+      "y": 304800,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_3",
@@ -247,17 +236,6 @@ exports[`<SectionDivider/> goldens — blue > without eyebrow > blue bare ops 1`
       "foregroundColor": "#0b0b0b",
     },
     "type": "updateTextStyle",
-  },
-  {
-    "objectId": "shape_3",
-    "range": {
-      "end": 9,
-      "start": 0,
-    },
-    "style": {
-      "lineSpacing": 1.05,
-    },
-    "type": "updateParagraphStyle",
   },
   {
     "altText": "Sanity mark",
@@ -382,10 +360,10 @@ exports[`<SectionDivider/> goldens — dot-grid > with eyebrow > dot-grid with-e
   },
   {
     "rect": {
-      "h": 228600,
-      "w": 5334000,
+      "h": 165100,
+      "w": 11582400,
       "x": 304800,
-      "y": 317500,
+      "y": 304800,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_4",
@@ -412,10 +390,10 @@ exports[`<SectionDivider/> goldens — dot-grid > with eyebrow > dot-grid with-e
   },
   {
     "rect": {
-      "h": 1905000,
-      "w": 9906000,
+      "h": 990600,
+      "w": 11582400,
       "x": 304800,
-      "y": 736600,
+      "y": 622300,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_5",
@@ -439,17 +417,6 @@ exports[`<SectionDivider/> goldens — dot-grid > with eyebrow > dot-grid with-e
       "foregroundColor": "#ffffff",
     },
     "type": "updateTextStyle",
-  },
-  {
-    "objectId": "shape_5",
-    "range": {
-      "end": 15,
-      "start": 0,
-    },
-    "style": {
-      "lineSpacing": 1.05,
-    },
-    "type": "updateParagraphStyle",
   },
   {
     "altText": "Sanity mark",
@@ -574,10 +541,10 @@ exports[`<SectionDivider/> goldens — dot-grid > without eyebrow > dot-grid bar
   },
   {
     "rect": {
-      "h": 1905000,
-      "w": 9906000,
+      "h": 990600,
+      "w": 11582400,
       "x": 304800,
-      "y": 736600,
+      "y": 304800,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_4",
@@ -601,17 +568,6 @@ exports[`<SectionDivider/> goldens — dot-grid > without eyebrow > dot-grid bar
       "foregroundColor": "#ffffff",
     },
     "type": "updateTextStyle",
-  },
-  {
-    "objectId": "shape_4",
-    "range": {
-      "end": 15,
-      "start": 0,
-    },
-    "style": {
-      "lineSpacing": 1.05,
-    },
-    "type": "updateParagraphStyle",
   },
   {
     "altText": "Sanity mark",
@@ -717,10 +673,10 @@ exports[`<SectionDivider/> goldens — orange-red > with eyebrow > orange-red wi
   },
   {
     "rect": {
-      "h": 228600,
-      "w": 5334000,
+      "h": 165100,
+      "w": 11582400,
       "x": 304800,
-      "y": 317500,
+      "y": 304800,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_3",
@@ -747,10 +703,10 @@ exports[`<SectionDivider/> goldens — orange-red > with eyebrow > orange-red wi
   },
   {
     "rect": {
-      "h": 1905000,
-      "w": 9906000,
+      "h": 990600,
+      "w": 11582400,
       "x": 304800,
-      "y": 736600,
+      "y": 622300,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_4",
@@ -774,17 +730,6 @@ exports[`<SectionDivider/> goldens — orange-red > with eyebrow > orange-red wi
       "foregroundColor": "#0b0b0b",
     },
     "type": "updateTextStyle",
-  },
-  {
-    "objectId": "shape_4",
-    "range": {
-      "end": 16,
-      "start": 0,
-    },
-    "style": {
-      "lineSpacing": 1.05,
-    },
-    "type": "updateParagraphStyle",
   },
   {
     "altText": "Sanity mark",
@@ -890,10 +835,10 @@ exports[`<SectionDivider/> goldens — orange-red > without eyebrow > orange-red
   },
   {
     "rect": {
-      "h": 1905000,
-      "w": 9906000,
+      "h": 990600,
+      "w": 11582400,
       "x": 304800,
-      "y": 736600,
+      "y": 304800,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_3",
@@ -917,17 +862,6 @@ exports[`<SectionDivider/> goldens — orange-red > without eyebrow > orange-red
       "foregroundColor": "#0b0b0b",
     },
     "type": "updateTextStyle",
-  },
-  {
-    "objectId": "shape_3",
-    "range": {
-      "end": 16,
-      "start": 0,
-    },
-    "style": {
-      "lineSpacing": 1.05,
-    },
-    "type": "updateParagraphStyle",
   },
   {
     "altText": "Sanity mark",

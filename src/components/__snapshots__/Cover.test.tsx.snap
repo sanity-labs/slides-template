@@ -51,10 +51,10 @@ exports[`<Cover/> goldens > full: title + subtitle + custom eyebrow > ops 1`] = 
   },
   {
     "rect": {
-      "h": 228600,
-      "w": 5334000,
+      "h": 165100,
+      "w": 11582400,
       "x": 304800,
-      "y": 317500,
+      "y": 304800,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_3",
@@ -81,10 +81,10 @@ exports[`<Cover/> goldens > full: title + subtitle + custom eyebrow > ops 1`] = 
   },
   {
     "rect": {
-      "h": 1854200,
-      "w": 8890000,
+      "h": 1092200,
+      "w": 11582400,
       "x": 304800,
-      "y": 711200,
+      "y": 622300,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_4",
@@ -110,22 +110,11 @@ exports[`<Cover/> goldens > full: title + subtitle + custom eyebrow > ops 1`] = 
     "type": "updateTextStyle",
   },
   {
-    "objectId": "shape_4",
-    "range": {
-      "end": 9,
-      "start": 0,
-    },
-    "style": {
-      "lineSpacing": 1.05,
-    },
-    "type": "updateParagraphStyle",
-  },
-  {
     "rect": {
-      "h": 1219200,
-      "w": 5461000,
-      "x": 812800,
-      "y": 2870200,
+      "h": 609600,
+      "w": 5791200,
+      "x": 304800,
+      "y": 1854200,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_5",
@@ -149,17 +138,6 @@ exports[`<Cover/> goldens > full: title + subtitle + custom eyebrow > ops 1`] = 
       "foregroundColor": "#ffffff",
     },
     "type": "updateTextStyle",
-  },
-  {
-    "objectId": "shape_5",
-    "range": {
-      "end": 29,
-      "start": 0,
-    },
-    "style": {
-      "lineSpacing": 1.24,
-    },
-    "type": "updateParagraphStyle",
   },
   {
     "altText": "Sanity logo",
@@ -268,10 +246,10 @@ exports[`<Cover/> goldens > minimum: title only > ops 1`] = `
   },
   {
     "rect": {
-      "h": 228600,
-      "w": 5334000,
+      "h": 165100,
+      "w": 11582400,
       "x": 304800,
-      "y": 317500,
+      "y": 304800,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_3",
@@ -298,10 +276,10 @@ exports[`<Cover/> goldens > minimum: title only > ops 1`] = `
   },
   {
     "rect": {
-      "h": 1854200,
-      "w": 8890000,
+      "h": 1092200,
+      "w": 11582400,
       "x": 304800,
-      "y": 711200,
+      "y": 622300,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_4",
@@ -325,17 +303,6 @@ exports[`<Cover/> goldens > minimum: title only > ops 1`] = `
       "foregroundColor": "#ffffff",
     },
     "type": "updateTextStyle",
-  },
-  {
-    "objectId": "shape_4",
-    "range": {
-      "end": 9,
-      "start": 0,
-    },
-    "style": {
-      "lineSpacing": 1.05,
-    },
-    "type": "updateParagraphStyle",
   },
   {
     "altText": "Sanity logo",

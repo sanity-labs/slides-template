@@ -105,12 +105,35 @@ export const sanity = defineTemplate({
         'bg-surface': '#ffffff',
         accent: '#ff5500',
       },
+      typography: {
+        ...flat.typography,
+        // Role aliases used by the curated slide components via
+        // `text-role-<name>` classes. Each alias pins fontFamily + fontSize
+        // so the same role renders consistently across slides and in any
+        // Tier-2 custom component that reaches for it.
+        'cover-title': { fontFamily: 'display', fontSize: 66, lineHeight: 1.05 },
+        'cover-subtitle': { fontFamily: 'body', fontSize: 24, lineHeight: 1.24 },
+        'section-title': { fontFamily: 'display', fontSize: 60, lineHeight: 1.05 },
+        'closing-title': { fontFamily: 'display', fontSize: 66, lineHeight: 1.05 },
+        title: { fontFamily: 'display', fontSize: 44, lineHeight: 1.05 },
+        'agenda-title': { fontFamily: 'display', fontSize: 38, lineHeight: 1.1 },
+        'agenda-number': { fontFamily: 'display', fontSize: 38, lineHeight: 1.1 },
+        'agenda-title-simple': { fontFamily: 'display', fontSize: 34, lineHeight: 1.1 },
+        body: { fontFamily: 'body', fontSize: 20, lineHeight: 1.28 },
+        'body-md': { fontFamily: 'body', fontSize: 18, lineHeight: 1.28 },
+        'body-sm': { fontFamily: 'body', fontSize: 16, lineHeight: 1.28 },
+        'body-xs': { fontFamily: 'body', fontSize: 15, lineHeight: 1.28 },
+        'demo-label': { fontFamily: 'mono', fontSize: 13, lineHeight: 1.2 },
+        bullet: { fontFamily: 'mono', fontSize: 11, lineHeight: 1.4 },
+        eyebrow: { fontFamily: 'mono', fontSize: 10, lineHeight: 1.2 },
+        footer: { fontFamily: 'mono', fontSize: 10, lineHeight: 1.2 },
+      },
     };
   })(),
   // Opt the brand-chrome helpers into the agent's import allowlist so
-  // Tier-2 custom components can compose with <BrandSlide>, <TopLabel>,
-  // <Chrome>, <DotGrid>, etc., matching the curated slides' visual system.
-  // The framework's brand lock still applies to imports outside this list.
+  // Tier-2 custom components can compose with <DotGrid>, <DottedRule>, etc.,
+  // matching the curated slides' visual system. The framework's brand lock
+  // still applies to imports outside this list.
   additionalImportAllowlist: ['@sanity-labs/slides-template'],
   components: {
     Cover: defineTemplateComponent({
@@ -172,17 +195,11 @@ export const sanity = defineTemplate({
 export {
   BRAND_IMAGES,
   Background,
-  BrandText,
   CANVAS,
   COLORS,
-  Chrome,
   DotGrid,
   DottedRule,
-  Label,
-  TopLabel,
-  type BrandTextProps,
   type BrandTone,
-  type ChromeProps,
   type Rect,
 } from './components/brand.js';
 

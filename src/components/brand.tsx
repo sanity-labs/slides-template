@@ -1,13 +1,10 @@
-import type { ReactElement, ReactNode } from 'react';
+import type { ReactElement } from 'react';
 import {
   Box,
   Image,
-  Text,
   type ArtifactRef,
   type HexColor,
   type ImageRef,
-  type SlotId,
-  type TextStyle,
 } from '@sanity-labs/slides';
 import {
   CLOSING_MARK_BLACK_ON_BRAND,
@@ -26,7 +23,6 @@ export type Rect = {
 };
 
 export type BrandTone = 'dark' | 'brand' | 'blue';
-type FontRole = 'display' | 'body' | 'mono';
 
 export const CANVAS: Rect = { x: 0, y: 0, w: 960, h: 540 };
 
@@ -70,22 +66,6 @@ const toneBackground = (tone: BrandTone): HexColor => {
   if (tone === 'brand') return COLORS.brand;
   if (tone === 'blue') return COLORS.blue;
   return COLORS.black;
-};
-
-const toneForeground = (tone: BrandTone): HexColor =>
-  tone === 'dark' ? COLORS.white : COLORS.black;
-
-const toneMuted = (tone: BrandTone): HexColor => (tone === 'dark' ? COLORS.gray300 : COLORS.black);
-
-const markForTone = (tone: BrandTone): ImageRef => {
-  if (tone === 'brand') return BRAND_IMAGES.markBrand;
-  if (tone === 'blue') return BRAND_IMAGES.markBlue;
-  return BRAND_IMAGES.markWhite;
-};
-
-const lockupForTone = (tone: BrandTone): ImageRef => {
-  if (tone === 'brand') return BRAND_IMAGES.lockupBrand;
-  return BRAND_IMAGES.lockupWhite;
 };
 
 const svgDataUri = (svg: string): string => {
@@ -156,116 +136,6 @@ export const Background = ({ tone = 'dark' }: { readonly tone?: BrandTone }): Re
   <Box rect={CANVAS} fill={{ kind: 'solid', color: toneBackground(tone) }} />
 );
 
-export type ChromeProps = {
-  readonly tone?: BrandTone;
-  readonly lockup?: boolean;
-  readonly footer?: string | null;
-};
-
-export type BrandTextProps = {
-  readonly rect: Rect;
-  readonly children?: ReactNode;
-  readonly slotId?: SlotId;
-  readonly size: number;
-  readonly color?: HexColor;
-  readonly font?: FontRole;
-  readonly bold?: boolean;
-  readonly align?: 'START' | 'CENTER' | 'END';
-  readonly lineSpacing?: number;
-};
-
-export const BrandText = ({
-  rect,
-  children,
-  slotId,
-  size,
-  color = COLORS.white,
-  font = 'display',
-  bold,
-  align,
-  lineSpacing,
-}: BrandTextProps): ReactElement => {
-  const textStyle: TextStyle = {
-    fontFamily: font,
-    fontSize: size,
-    foregroundColor: color,
-    ...(bold === undefined ? {} : { bold }),
-  };
-
-  const paragraphStyle =
-    align === undefined && lineSpacing === undefined
-      ? undefined
-      : {
-          ...(align === undefined ? {} : { alignment: align }),
-          ...(lineSpacing === undefined ? {} : { lineSpacing }),
-        };
-
-  return (
-    <Box rect={rect} slotId={slotId} textStyle={textStyle} paragraphStyle={paragraphStyle}>
-      <Text>{children}</Text>
-    </Box>
-  );
-};
-
-export const Label = ({
-  rect,
-  children,
-  tone = 'dark',
-  color,
-  slotId,
-}: {
-  readonly rect: Rect;
-  readonly children?: ReactNode;
-  readonly tone?: BrandTone;
-  readonly color?: HexColor;
-  readonly slotId?: SlotId;
-}): ReactElement => (
-  <BrandText rect={rect} size={10} color={color ?? toneMuted(tone)} font="mono" slotId={slotId}>
-    {children}
-  </BrandText>
-);
-
-export const Chrome = ({
-  tone = 'dark',
-  lockup = false,
-  footer = 'SANITY INC - 2026',
-}: ChromeProps): ReactElement => (
-  <>
-    <Image
-      rect={
-        lockup ? { x: 24, y: 491.19, w: 115.2, h: 28.8 } : { x: 24, y: 488.93, w: 33.6, h: 27.36 }
-      }
-      image={lockup ? lockupForTone(tone) : markForTone(tone)}
-      altText={lockup ? 'Sanity logo' : 'Sanity mark'}
-    />
-    {footer === null ? null : (
-      <BrandText
-        rect={{ x: 826, y: 497, w: 110, h: 16 }}
-        size={10}
-        color={toneMuted(tone)}
-        font="mono"
-        align="END"
-      >
-        {footer}
-      </BrandText>
-    )}
-  </>
-);
-
-export const TopLabel = ({
-  children,
-  tone = 'dark',
-  slotId,
-}: {
-  readonly children?: ReactNode;
-  readonly tone?: BrandTone;
-  readonly slotId?: SlotId;
-}): ReactElement => (
-  <Label rect={{ x: 24, y: 25, w: 420, h: 18 }} tone={tone} slotId={slotId}>
-    {children}
-  </Label>
-);
-
 export const DottedRule = ({
   rect,
   tone = 'dark',
@@ -306,5 +176,3 @@ export const DotGrid = ({ rect }: { readonly rect: Rect }): ReactElement => {
     <Image rect={rect} image={patternRef(`dot-grid-dark-${rect.w}x${rect.h}`, svg)} altText="" />
   );
 };
-
-export const fieldColor = toneForeground;

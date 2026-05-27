@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react';
 import { Box, Slide } from '@sanity-labs/slides';
 import { z } from 'zod';
-import { BrandText, COLORS, DotGrid, TopLabel } from './brand.js';
+import { DotGrid } from './brand.js';
 
 export const DemoSchema = z
   .object({
@@ -13,19 +13,23 @@ export const DemoSchema = z
 type DemoProps = z.infer<typeof DemoSchema>;
 
 export const Demo = ({ eyebrow = 'EYEBROW', label = '[ DEMO ]' }: DemoProps): ReactElement => (
-  <Slide>
-    <TopLabel slotId="demo:eyebrow">{eyebrow}</TopLabel>
+  <Slide className="flex flex-col p-6 gap-3">
+    <Box className="text-role-eyebrow text-gray-300" slotId="demo:eyebrow">
+      {eyebrow}
+    </Box>
     <DotGrid rect={{ x: 24, y: 44, w: 900, h: 430 }} />
-    <Box rect={{ x: 326, y: 184, w: 340, h: 150 }} fill={{ kind: 'solid', color: COLORS.black }} />
-    <BrandText
-      rect={{ x: 326, y: 259, w: 340, h: 20 }}
-      size={13}
-      color={COLORS.gray200}
-      font="mono"
-      align="CENTER"
-      slotId="demo:label"
+    {/* Centered black panel + label, absolute-positioned so the dot-grid sits
+        behind it on the dark canvas. */}
+    <Box
+      rect={{ x: 326, y: 184, w: 340, h: 150 }}
+      className="bg-black flex items-center justify-center"
     >
-      {label}
-    </BrandText>
+      <Box
+        className="text-role-demo-label text-gray-200 text-center"
+        slotId="demo:label"
+      >
+        {label}
+      </Box>
+    </Box>
   </Slide>
 );
