@@ -268,6 +268,33 @@ export const MyMetric = ({ value, label }) => (
 );
 ```
 
+If your custom slide needs a raster image, import the friendly `<Image>` from
+`@sanity-labs/slides/media`. It takes a string `src`, requires `alt`, and
+exposes `fit`, `opacity`, and `rotate` props alongside the standard className /
+Yoga sizing:
+
+```tsx
+import { Image } from '@sanity-labs/slides/media';
+
+<Slide className="flex flex-col p-6 gap-6">
+  <Box className="text-role-eyebrow">CASE STUDY</Box>
+  <Box className="text-role-title">A 2x increase in throughput</Box>
+  <Image
+    src="/images/dashboard.png"
+    alt="Production dashboard showing the throughput gain"
+    width={1920}
+    height={1080}
+    fit="contain"
+    className="w-full aspect-video"
+  />
+</Slide>
+```
+
+Notes:
+- Pass `width` / `height` (intrinsic pixel dims) for `fit="contain"` to work on PPTX export.
+- Control rendered shape via `className` (`aspect-video`, `aspect-square`, `w-*` / `h-*`); the wrapper does **not** set Yoga `aspectRatio` automatically.
+- `fit="cover"` works in the dev viewer but degrades to stretch on PPTX export (known pptxgenjs limitation); use `contain` for guaranteed-correct PPTX rendering.
+
 If you need brand texture (dot-grid, dotted rules), import the texture helpers
 from the template package:
 
