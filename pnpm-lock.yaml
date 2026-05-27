@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@sanity-labs/slides':
-        specifier: ^0.5.4
-        version: 0.5.4(@types/node@25.9.1)(clsx@2.1.1)(lucide-react@0.511.0(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react-zoom-pan-pinch@4.0.3(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react@19.2.6)(vite@5.4.21(@types/node@25.9.1))
+        specifier: ^0.6.0
+        version: 0.6.0(@types/node@25.9.1)(clsx@2.1.1)(lucide-react@0.511.0(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react-zoom-pan-pinch@4.0.3(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react@19.2.6)(vite@5.4.21(@types/node@25.9.1))
       zod:
         specifier: ^3.23.0
         version: 3.25.76
@@ -697,8 +697,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@sanity-labs/slides@0.5.4':
-    resolution: {integrity: sha512-TerEbOhDZp8Z2+tTs7cQcRyrb45+L1PPBIM3bIK+t/7+NGzOJmr+A0uLcFkhZHBfAbhNQJZSKFu2cEc/91YGoA==}
+  '@sanity-labs/slides@0.6.0':
+    resolution: {integrity: sha512-EuDssSYp9KFXDeF/QG/Gzk+XQ6WZkvDtk4Wd7CHc3NWYfpq3797QKJghJTijfjEn/GrK52uv1CJWV0DqSj3muQ==}
     engines: {node: '>=20'}
     hasBin: true
     peerDependencies:
@@ -2020,7 +2020,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.60.4':
     optional: true
 
-  '@sanity-labs/slides@0.5.4(@types/node@25.9.1)(clsx@2.1.1)(lucide-react@0.511.0(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react-zoom-pan-pinch@4.0.3(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react@19.2.6)(vite@5.4.21(@types/node@25.9.1))':
+  '@sanity-labs/slides@0.6.0(@types/node@25.9.1)(clsx@2.1.1)(lucide-react@0.511.0(react@19.2.6))(react-dom@19.2.6(react@19.2.6))(react-zoom-pan-pinch@4.0.3(react-dom@19.2.6(react@19.2.6))(react@19.2.6))(react@19.2.6)(vite@5.4.21(@types/node@25.9.1))':
     dependencies:
       '@inquirer/prompts': 8.5.0(@types/node@25.9.1)
       '@modelcontextprotocol/sdk': 1.29.0(zod@3.25.76)
