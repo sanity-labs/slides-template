@@ -17,8 +17,7 @@
 
 import type { ReactElement } from 'react';
 import { Image, defineLayout } from '@sanity-labs/slides';
-import { BRAND_IMAGES } from './components/brand.js';
-import { Background, BrandText, COLORS, type BrandTone } from './components/brand.js';
+import { Background, BRAND_IMAGES, BrandText, COLORS, type BrandTone } from './components/brand.js';
 
 export type SanityLayoutProps = {
   readonly tone?: BrandTone;
