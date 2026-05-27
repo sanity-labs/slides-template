@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react';
-import { Slide, type SlotId } from '@sanity-labs/slides';
+import { Box, Slide, type SlotId } from '@sanity-labs/slides';
 import { z } from 'zod';
-import { BrandText, COLORS, DotGrid, TopLabel } from './brand.js';
+import { DotGrid } from './brand.js';
 
 export const SectionDividerSchema = z
   .object({
@@ -34,27 +34,22 @@ export const SectionDivider = ({
   slotPrefix,
 }: SectionDividerProps): ReactElement => {
   const tone = toneForVariant(variant);
-  const foreground = tone === 'dark' ? COLORS.white : COLORS.black;
+  const titleColor = tone === 'dark' ? 'text-white' : 'text-black';
+  const eyebrowColor = tone === 'dark' ? 'text-gray-300' : 'text-black';
   const slot = (name: string): SlotId | undefined =>
     slotPrefix === undefined ? undefined : (`${slotPrefix}:${name}` as SlotId);
 
   return (
-    <Slide layoutProps={{ tone }}>
+    <Slide layoutProps={{ tone }} className="flex flex-col p-6 gap-3">
       {variant === 'dot-grid' ? <DotGrid rect={{ x: 24, y: 44, w: 900, h: 390 }} /> : null}
       {eyebrow === undefined ? null : (
-        <TopLabel tone={tone} slotId={slot('eyebrow')}>
+        <Box className={`text-role-eyebrow ${eyebrowColor}`} slotId={slot('eyebrow')}>
           {eyebrow}
-        </TopLabel>
+        </Box>
       )}
-      <BrandText
-        rect={{ x: 24, y: 58, w: 780, h: 150 }}
-        size={60}
-        color={foreground}
-        lineSpacing={1.05}
-        slotId={slot('title')}
-      >
+      <Box className={`text-role-section-title ${titleColor}`} slotId={slot('title')}>
         {title}
-      </BrandText>
+      </Box>
     </Slide>
   );
 };

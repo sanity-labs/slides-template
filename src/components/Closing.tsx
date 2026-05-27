@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react';
-import { Image, Slide } from '@sanity-labs/slides';
+import { Box, Image, Slide } from '@sanity-labs/slides';
 import { z } from 'zod';
-import { BRAND_IMAGES, BrandText, COLORS, TopLabel } from './brand.js';
+import { BRAND_IMAGES } from './brand.js';
 
 export const ClosingSchema = z
   .object({
@@ -21,34 +21,32 @@ export const Closing = ({
   title = 'QnA',
   eyebrow = 'THANK YOU',
 }: ClosingProps): ReactElement => (
-  <Slide layoutProps={{ tone: 'brand', lockup: true, footer: null }}>
+  <Slide
+    layoutProps={{ tone: 'brand', lockup: true, footer: null }}
+    className="flex flex-col p-6 gap-3"
+  >
+    {/* Oversized closing mark — absolute overlay on the right of the slide. */}
     <Image
       rect={{ x: 240, y: 0, w: 720, h: 540 }}
       image={BRAND_IMAGES.closingMark}
       altText="Sanity mark"
     />
-    <TopLabel tone="brand" slotId="closing:eyebrow">
+    <Box className="text-role-eyebrow text-black" slotId="closing:eyebrow">
       {eyebrow}
-    </TopLabel>
-    <BrandText
-      rect={{ x: 24, y: 205, w: 300, h: 90 }}
-      size={66}
-      color={COLORS.black}
-      slotId="closing:title"
-    >
+    </Box>
+    {/* Spacer pushes the title down to roughly match the curated y=205. */}
+    <Box className="h-1/3" />
+    <Box className="text-role-closing-title text-black" slotId="closing:title">
       {title}
-    </BrandText>
+    </Box>
     {slideNumber === undefined ? null : (
-      <BrandText
+      <Box
         rect={{ x: 826, y: 497, w: 110, h: 16 }}
-        size={10}
-        color={COLORS.black}
-        font="mono"
-        align="END"
+        className="text-role-footer text-black text-right"
         slotId="closing:slide-number"
       >
         {slideNumber}
-      </BrandText>
+      </Box>
     )}
   </Slide>
 );

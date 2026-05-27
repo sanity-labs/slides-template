@@ -268,18 +268,20 @@ export const MyMetric = ({ value, label }) => (
 );
 ```
 
-If you need brand texture (dot-grid, dotted rules) or the typed helper components,
-import them from the template helpers package:
+If you need brand texture (dot-grid, dotted rules), import the texture helpers
+from the template package:
 
 ```tsx
-import { BrandText, COLORS, DotGrid, DottedRule, Label, TopLabel } from '@sanity-labs/slides-template';
+import { COLORS, DotGrid, DottedRule } from '@sanity-labs/slides-template';
 ```
 
 - **Don't** wrap content in any "BrandSlide" — that's gone. Just use `<Slide>`.
 - Use `<Slide layoutProps={{ tone: 'brand' }}>` for a colored background on this slide.
 - Use `<Slide noLayout>` only for true full-bleed slides where chrome would interfere.
-- Use `<TopLabel>` for eyebrows (top-left, mono, gray) when you want the canonical position.
-- Use `text-role-title` / `text-role-body` / `text-role-eyebrow` for typographic consistency.
+- Use `text-role-eyebrow text-gray-300` on a top-left `<Box>` for the canonical eyebrow.
+- Use `text-role-title` / `text-role-body` / `text-role-eyebrow` (or `cover-title`,
+  `section-title`, `body-md`, `body-sm`, `body-xs`, `bullet`, `footer`) for typographic
+  consistency. The role aliases pin the same family + size used by the curated slides.
 - Use `COLORS.white` / `COLORS.gray300` only when className tokens aren't expressive enough.
 - **Never** use hex color literals — always brand tokens.
 - Text is Sanity Black or White only — never OrangeRed, never secondary colors.

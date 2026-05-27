@@ -1,15 +1,7 @@
 import type { ReactElement } from 'react';
-import { Slide, type SlotId } from '@sanity-labs/slides';
+import { Box, Slide, type SlotId } from '@sanity-labs/slides';
 import { z } from 'zod';
-import {
-  BrandText,
-  COLORS,
-  DotGrid,
-  DottedRule,
-  Label,
-  TopLabel,
-  type Rect,
-} from './brand.js';
+import { DotGrid, DottedRule, type Rect } from './brand.js';
 
 const slotIdOrUndefined = (slotPrefix: string | undefined, name: string): SlotId | undefined =>
   slotPrefix === undefined ? undefined : (`${slotPrefix}:${name}` as SlotId);
@@ -47,6 +39,9 @@ export const TitleAndGridSchema = z
 type TitleAndGridProps = z.infer<typeof TitleAndGridSchema>;
 type GridCell = TitleAndGridProps['cells'][number];
 
+// Grid bounds match the curated reference deck. Cells are positioned absolutely
+// because the dotted-rule and dot-grid textures are <Image> overlays that need
+// known coordinates. Text inside each cell flexes naturally via className.
 const GRID_BOUNDS: Rect = { x: 57.6, y: 136, w: 844.8, h: 262 };
 const ROW_BOUNDS: Rect = { x: 132, y: 146, w: 640, h: 230 };
 
@@ -81,24 +76,22 @@ const GridField = ({
 }): ReactElement => (
   <>
     <DottedRule rect={{ x: rect.x, y: rect.y, w: rect.w, h: 12 }} />
-    {cell.eyebrow === undefined ? null : (
-      <Label
-        rect={{ x: rect.x, y: rect.y + 18, w: rect.w, h: 18 }}
-        slotId={slotIdOrUndefined(slotPrefix, `cell-${index}-eyebrow`)}
+    <Box rect={rect} className="flex flex-col gap-2 pt-4">
+      {cell.eyebrow === undefined ? null : (
+        <Box
+          className="text-role-eyebrow text-gray-300"
+          slotId={slotIdOrUndefined(slotPrefix, `cell-${index}-eyebrow`)}
+        >
+          {cell.eyebrow}
+        </Box>
+      )}
+      <Box
+        className="text-role-body-xs text-white"
+        slotId={slotIdOrUndefined(slotPrefix, `cell-${index}-body`)}
       >
-        {cell.eyebrow}
-      </Label>
-    )}
-    <BrandText
-      rect={{ x: rect.x, y: rect.y + 40, w: rect.w, h: showTexture ? 92 : rect.h - 40 }}
-      size={15}
-      color={COLORS.white}
-      font="body"
-      lineSpacing={1.28}
-      slotId={slotIdOrUndefined(slotPrefix, `cell-${index}-body`)}
-    >
-      {cell.body}
-    </BrandText>
+        {cell.body}
+      </Box>
+    </Box>
     {showTexture ? <DotGrid rect={{ x: rect.x, y: rect.y + 132, w: rect.w, h: 130 }} /> : null}
   </>
 );
@@ -114,24 +107,20 @@ const RowField = ({
   readonly index: number;
   readonly slotPrefix: string | undefined;
 }): ReactElement => (
-  <>
-    <Label
-      rect={{ x: rect.x, y: rect.y + 6, w: 150, h: 20 }}
+  <Box rect={rect} className="flex flex-row gap-8">
+    <Box
+      className="text-role-eyebrow text-gray-300 w-1/4"
       slotId={slotIdOrUndefined(slotPrefix, `row-${index}-eyebrow`)}
     >
       {cell.eyebrow}
-    </Label>
-    <BrandText
-      rect={{ x: rect.x + 160, y: rect.y, w: rect.w - 160, h: rect.h }}
-      size={18}
-      color={COLORS.white}
-      font="body"
-      lineSpacing={1.28}
+    </Box>
+    <Box
+      className="text-role-body-md text-white flex-1"
       slotId={slotIdOrUndefined(slotPrefix, `row-${index}-body`)}
     >
       {cell.body}
-    </BrandText>
-  </>
+    </Box>
+  </Box>
 );
 
 export const TitleAndGrid = ({
@@ -147,17 +136,19 @@ export const TitleAndGrid = ({
   const rowLayout = cols === 1 && rowCount > 1;
 
   return (
-    <Slide layoutProps={{ footer }}>
-      <TopLabel slotId={slotIdOrUndefined(slotPrefix, 'eyebrow')}>{eyebrow}</TopLabel>
-      <BrandText
-        rect={{ x: 24, y: 54, w: 760, h: 74 }}
-        size={44}
-        color={COLORS.white}
-        lineSpacing={1.05}
+    <Slide layoutProps={{ footer }} className="flex flex-col p-6 gap-3">
+      <Box
+        className="text-role-eyebrow text-gray-300"
+        slotId={slotIdOrUndefined(slotPrefix, 'eyebrow')}
+      >
+        {eyebrow}
+      </Box>
+      <Box
+        className="text-role-title text-white"
         slotId={slotIdOrUndefined(slotPrefix, 'title')}
       >
         {title}
-      </BrandText>
+      </Box>
       {cells.map((cell, index) => {
         const rect = rowLayout
           ? cellRect(ROW_BOUNDS, 1, rowCount, 12, index)

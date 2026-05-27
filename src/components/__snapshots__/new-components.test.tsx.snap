@@ -22,7 +22,7 @@ exports[`<Closing/> goldens > minimal: no slide number > closing minimal manifes
   "manifestVersion": "1",
   "slots": {
     "closing:eyebrow": "shape_4",
-    "closing:title": "shape_5",
+    "closing:title": "shape_6",
   },
   "templateName": "sanity",
 }
@@ -69,10 +69,10 @@ exports[`<Closing/> goldens > minimal: no slide number > closing minimal ops 1`]
   },
   {
     "rect": {
-      "h": 228600,
-      "w": 5334000,
+      "h": 165100,
+      "w": 11582400,
       "x": 304800,
-      "y": 317500,
+      "y": 304800,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_4",
@@ -99,10 +99,10 @@ exports[`<Closing/> goldens > minimal: no slide number > closing minimal ops 1`]
   },
   {
     "rect": {
-      "h": 1143000,
-      "w": 3810000,
+      "h": 2082800,
+      "w": 11582400,
       "x": 304800,
-      "y": 2603500,
+      "y": 622300,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_5",
@@ -110,12 +110,24 @@ exports[`<Closing/> goldens > minimal: no slide number > closing minimal ops 1`]
     "type": "createShape",
   },
   {
-    "objectId": "shape_5",
+    "rect": {
+      "h": 1104900,
+      "w": 11582400,
+      "x": 304800,
+      "y": 2844800,
+    },
+    "shape": "TEXT_BOX",
+    "shapeId": "shape_6",
+    "slideId": "slide_1",
+    "type": "createShape",
+  },
+  {
+    "objectId": "shape_6",
     "text": "QnA",
     "type": "insertText",
   },
   {
-    "objectId": "shape_5",
+    "objectId": "shape_6",
     "range": {
       "end": 3,
       "start": 0,
@@ -129,7 +141,7 @@ exports[`<Closing/> goldens > minimal: no slide number > closing minimal ops 1`]
   },
   {
     "altText": "Sanity logo",
-    "imageId": "image_6",
+    "imageId": "image_7",
     "rect": {
       "h": 368300,
       "w": 1460500,
@@ -165,8 +177,8 @@ exports[`<Closing/> goldens > with slide number > closing with-slide-number mani
   "manifestVersion": "1",
   "slots": {
     "closing:eyebrow": "shape_4",
-    "closing:slide-number": "shape_6",
-    "closing:title": "shape_5",
+    "closing:slide-number": "shape_7",
+    "closing:title": "shape_6",
   },
   "templateName": "sanity",
 }
@@ -213,10 +225,10 @@ exports[`<Closing/> goldens > with slide number > closing with-slide-number ops 
   },
   {
     "rect": {
-      "h": 228600,
-      "w": 5334000,
+      "h": 165100,
+      "w": 11582400,
       "x": 304800,
-      "y": 317500,
+      "y": 304800,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_4",
@@ -243,10 +255,10 @@ exports[`<Closing/> goldens > with slide number > closing with-slide-number ops 
   },
   {
     "rect": {
-      "h": 1143000,
-      "w": 3810000,
+      "h": 2082800,
+      "w": 11582400,
       "x": 304800,
-      "y": 2603500,
+      "y": 622300,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_5",
@@ -254,12 +266,24 @@ exports[`<Closing/> goldens > with slide number > closing with-slide-number ops 
     "type": "createShape",
   },
   {
-    "objectId": "shape_5",
+    "rect": {
+      "h": 1104900,
+      "w": 11582400,
+      "x": 304800,
+      "y": 2844800,
+    },
+    "shape": "TEXT_BOX",
+    "shapeId": "shape_6",
+    "slideId": "slide_1",
+    "type": "createShape",
+  },
+  {
+    "objectId": "shape_6",
     "text": "QnA",
     "type": "insertText",
   },
   {
-    "objectId": "shape_5",
+    "objectId": "shape_6",
     "range": {
       "end": 3,
       "start": 0,
@@ -279,17 +303,17 @@ exports[`<Closing/> goldens > with slide number > closing with-slide-number ops 
       "y": 6311900,
     },
     "shape": "TEXT_BOX",
-    "shapeId": "shape_6",
+    "shapeId": "shape_7",
     "slideId": "slide_1",
     "type": "createShape",
   },
   {
-    "objectId": "shape_6",
+    "objectId": "shape_7",
     "text": "12 / 12",
     "type": "insertText",
   },
   {
-    "objectId": "shape_6",
+    "objectId": "shape_7",
     "range": {
       "end": 7,
       "start": 0,
@@ -302,7 +326,7 @@ exports[`<Closing/> goldens > with slide number > closing with-slide-number ops 
     "type": "updateTextStyle",
   },
   {
-    "objectId": "shape_6",
+    "objectId": "shape_7",
     "range": {
       "end": 7,
       "start": 0,
@@ -314,7 +338,7 @@ exports[`<Closing/> goldens > with slide number > closing with-slide-number ops 
   },
   {
     "altText": "Sanity logo",
-    "imageId": "image_7",
+    "imageId": "image_8",
     "rect": {
       "h": 368300,
       "w": 1460500,
@@ -349,8 +373,8 @@ exports[`<OneColumn/> goldens > full: with eyebrows + footer > one-column full m
   "generatedBy": "react-pptx",
   "manifestVersion": "1",
   "slots": {
-    "one-column:body": "shape_6",
-    "one-column:body-eyebrow": "shape_5",
+    "one-column:body": "shape_7",
+    "one-column:body-eyebrow": "shape_6",
     "one-column:eyebrow": "shape_3",
     "one-column:title": "shape_4",
   },
@@ -386,10 +410,10 @@ exports[`<OneColumn/> goldens > full: with eyebrows + footer > one-column full o
   },
   {
     "rect": {
-      "h": 228600,
-      "w": 5334000,
+      "h": 165100,
+      "w": 11582400,
       "x": 304800,
-      "y": 317500,
+      "y": 304800,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_3",
@@ -416,10 +440,10 @@ exports[`<OneColumn/> goldens > full: with eyebrows + footer > one-column full o
   },
   {
     "rect": {
-      "h": 939800,
-      "w": 9652000,
+      "h": 736600,
+      "w": 11582400,
       "x": 304800,
-      "y": 685800,
+      "y": 622300,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_4",
@@ -445,22 +469,11 @@ exports[`<OneColumn/> goldens > full: with eyebrows + footer > one-column full o
     "type": "updateTextStyle",
   },
   {
-    "objectId": "shape_4",
-    "range": {
-      "end": 16,
-      "start": 0,
-    },
-    "style": {
-      "lineSpacing": 1.05,
-    },
-    "type": "updateParagraphStyle",
-  },
-  {
     "rect": {
-      "h": 254000,
-      "w": 4191000,
-      "x": 1346200,
-      "y": 1701800,
+      "h": 838200,
+      "w": 3860800,
+      "x": 304800,
+      "y": 1498600,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_5",
@@ -468,12 +481,24 @@ exports[`<OneColumn/> goldens > full: with eyebrows + footer > one-column full o
     "type": "createShape",
   },
   {
-    "objectId": "shape_5",
+    "rect": {
+      "h": 165100,
+      "w": 3251200,
+      "x": 914400,
+      "y": 1803400,
+    },
+    "shape": "TEXT_BOX",
+    "shapeId": "shape_6",
+    "slideId": "slide_1",
+    "type": "createShape",
+  },
+  {
+    "objectId": "shape_6",
     "text": "OUTCOME",
     "type": "insertText",
   },
   {
-    "objectId": "shape_5",
+    "objectId": "shape_6",
     "range": {
       "end": 7,
       "start": 0,
@@ -487,23 +512,23 @@ exports[`<OneColumn/> goldens > full: with eyebrows + footer > one-column full o
   },
   {
     "rect": {
-      "h": 838200,
-      "w": 4191000,
-      "x": 1346200,
-      "y": 1968500,
+      "h": 266700,
+      "w": 3251200,
+      "x": 914400,
+      "y": 2070100,
     },
     "shape": "TEXT_BOX",
-    "shapeId": "shape_6",
+    "shapeId": "shape_7",
     "slideId": "slide_1",
     "type": "createShape",
   },
   {
-    "objectId": "shape_6",
+    "objectId": "shape_7",
     "text": "The strategy worked.",
     "type": "insertText",
   },
   {
-    "objectId": "shape_6",
+    "objectId": "shape_7",
     "range": {
       "end": 20,
       "start": 0,
@@ -516,19 +541,8 @@ exports[`<OneColumn/> goldens > full: with eyebrows + footer > one-column full o
     "type": "updateTextStyle",
   },
   {
-    "objectId": "shape_6",
-    "range": {
-      "end": 20,
-      "start": 0,
-    },
-    "style": {
-      "lineSpacing": 1.28,
-    },
-    "type": "updateParagraphStyle",
-  },
-  {
     "altText": "",
-    "imageId": "image_7",
+    "imageId": "image_8",
     "rect": {
       "h": 2984500,
       "w": 4191000,
@@ -541,7 +555,7 @@ exports[`<OneColumn/> goldens > full: with eyebrows + footer > one-column full o
   },
   {
     "altText": "Sanity mark",
-    "imageId": "image_8",
+    "imageId": "image_9",
     "rect": {
       "h": 342900,
       "w": 431800,
@@ -560,17 +574,17 @@ exports[`<OneColumn/> goldens > full: with eyebrows + footer > one-column full o
       "y": 6311900,
     },
     "shape": "TEXT_BOX",
-    "shapeId": "shape_9",
+    "shapeId": "shape_10",
     "slideId": "slide_1",
     "type": "createShape",
   },
   {
-    "objectId": "shape_9",
+    "objectId": "shape_10",
     "text": "Sanity 2026",
     "type": "insertText",
   },
   {
-    "objectId": "shape_9",
+    "objectId": "shape_10",
     "range": {
       "end": 11,
       "start": 0,
@@ -583,7 +597,7 @@ exports[`<OneColumn/> goldens > full: with eyebrows + footer > one-column full o
     "type": "updateTextStyle",
   },
   {
-    "objectId": "shape_9",
+    "objectId": "shape_10",
     "range": {
       "end": 11,
       "start": 0,
@@ -617,8 +631,8 @@ exports[`<OneColumn/> goldens > minimal: title + body > one-column minimal manif
   "generatedBy": "react-pptx",
   "manifestVersion": "1",
   "slots": {
-    "one-column:body": "shape_6",
-    "one-column:body-eyebrow": "shape_5",
+    "one-column:body": "shape_7",
+    "one-column:body-eyebrow": "shape_6",
     "one-column:eyebrow": "shape_3",
     "one-column:title": "shape_4",
   },
@@ -654,10 +668,10 @@ exports[`<OneColumn/> goldens > minimal: title + body > one-column minimal ops 1
   },
   {
     "rect": {
-      "h": 228600,
-      "w": 5334000,
+      "h": 165100,
+      "w": 11582400,
       "x": 304800,
-      "y": 317500,
+      "y": 304800,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_3",
@@ -684,10 +698,10 @@ exports[`<OneColumn/> goldens > minimal: title + body > one-column minimal ops 1
   },
   {
     "rect": {
-      "h": 939800,
-      "w": 9652000,
+      "h": 736600,
+      "w": 11582400,
       "x": 304800,
-      "y": 685800,
+      "y": 622300,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_4",
@@ -713,22 +727,11 @@ exports[`<OneColumn/> goldens > minimal: title + body > one-column minimal ops 1
     "type": "updateTextStyle",
   },
   {
-    "objectId": "shape_4",
-    "range": {
-      "end": 16,
-      "start": 0,
-    },
-    "style": {
-      "lineSpacing": 1.05,
-    },
-    "type": "updateParagraphStyle",
-  },
-  {
     "rect": {
-      "h": 254000,
-      "w": 4191000,
-      "x": 1346200,
-      "y": 1701800,
+      "h": 838200,
+      "w": 3860800,
+      "x": 304800,
+      "y": 1498600,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_5",
@@ -736,12 +739,24 @@ exports[`<OneColumn/> goldens > minimal: title + body > one-column minimal ops 1
     "type": "createShape",
   },
   {
-    "objectId": "shape_5",
+    "rect": {
+      "h": 165100,
+      "w": 3251200,
+      "x": 914400,
+      "y": 1803400,
+    },
+    "shape": "TEXT_BOX",
+    "shapeId": "shape_6",
+    "slideId": "slide_1",
+    "type": "createShape",
+  },
+  {
+    "objectId": "shape_6",
     "text": "SUBTITLE",
     "type": "insertText",
   },
   {
-    "objectId": "shape_5",
+    "objectId": "shape_6",
     "range": {
       "end": 8,
       "start": 0,
@@ -755,23 +770,23 @@ exports[`<OneColumn/> goldens > minimal: title + body > one-column minimal ops 1
   },
   {
     "rect": {
-      "h": 838200,
-      "w": 4191000,
-      "x": 1346200,
-      "y": 1968500,
+      "h": 266700,
+      "w": 3251200,
+      "x": 914400,
+      "y": 2070100,
     },
     "shape": "TEXT_BOX",
-    "shapeId": "shape_6",
+    "shapeId": "shape_7",
     "slideId": "slide_1",
     "type": "createShape",
   },
   {
-    "objectId": "shape_6",
+    "objectId": "shape_7",
     "text": "The strategy worked.",
     "type": "insertText",
   },
   {
-    "objectId": "shape_6",
+    "objectId": "shape_7",
     "range": {
       "end": 20,
       "start": 0,
@@ -784,19 +799,8 @@ exports[`<OneColumn/> goldens > minimal: title + body > one-column minimal ops 1
     "type": "updateTextStyle",
   },
   {
-    "objectId": "shape_6",
-    "range": {
-      "end": 20,
-      "start": 0,
-    },
-    "style": {
-      "lineSpacing": 1.28,
-    },
-    "type": "updateParagraphStyle",
-  },
-  {
     "altText": "",
-    "imageId": "image_7",
+    "imageId": "image_8",
     "rect": {
       "h": 2984500,
       "w": 4191000,
@@ -809,7 +813,7 @@ exports[`<OneColumn/> goldens > minimal: title + body > one-column minimal ops 1
   },
   {
     "altText": "Sanity mark",
-    "imageId": "image_8",
+    "imageId": "image_9",
     "rect": {
       "h": 342900,
       "w": 431800,
@@ -828,7 +832,7 @@ exports[`<OneColumn/> goldens > minimal: title + body > one-column minimal ops 1
       "y": 6311900,
     },
     "shape": "TEXT_BOX",
-    "shapeId": "shape_9",
+    "shapeId": "shape_10",
     "slideId": "slide_1",
     "type": "createShape",
   },
@@ -850,8 +854,8 @@ exports[`<TitleAndBody/> goldens > full: with eyebrows + footer > title-and-body
   "generatedBy": "react-pptx",
   "manifestVersion": "1",
   "slots": {
-    "title-and-body:body": "shape_6",
-    "title-and-body:body-eyebrow": "shape_5",
+    "title-and-body:body": "shape_7",
+    "title-and-body:body-eyebrow": "shape_6",
     "title-and-body:eyebrow": "shape_3",
     "title-and-body:title": "shape_4",
   },
@@ -887,10 +891,10 @@ exports[`<TitleAndBody/> goldens > full: with eyebrows + footer > title-and-body
   },
   {
     "rect": {
-      "h": 228600,
-      "w": 5334000,
+      "h": 165100,
+      "w": 11582400,
       "x": 304800,
-      "y": 317500,
+      "y": 304800,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_3",
@@ -917,10 +921,10 @@ exports[`<TitleAndBody/> goldens > full: with eyebrows + footer > title-and-body
   },
   {
     "rect": {
-      "h": 939800,
-      "w": 9652000,
+      "h": 736600,
+      "w": 11582400,
       "x": 304800,
-      "y": 685800,
+      "y": 622300,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_4",
@@ -946,22 +950,11 @@ exports[`<TitleAndBody/> goldens > full: with eyebrows + footer > title-and-body
     "type": "updateTextStyle",
   },
   {
-    "objectId": "shape_4",
-    "range": {
-      "end": 21,
-      "start": 0,
-    },
-    "style": {
-      "lineSpacing": 1.05,
-    },
-    "type": "updateParagraphStyle",
-  },
-  {
     "rect": {
-      "h": 254000,
-      "w": 3619500,
-      "x": 1739900,
-      "y": 1892300,
+      "h": 876300,
+      "w": 5791200,
+      "x": 304800,
+      "y": 1498600,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_5",
@@ -969,12 +962,24 @@ exports[`<TitleAndBody/> goldens > full: with eyebrows + footer > title-and-body
     "type": "createShape",
   },
   {
-    "objectId": "shape_5",
+    "rect": {
+      "h": 165100,
+      "w": 4978400,
+      "x": 1117600,
+      "y": 1803400,
+    },
+    "shape": "TEXT_BOX",
+    "shapeId": "shape_6",
+    "slideId": "slide_1",
+    "type": "createShape",
+  },
+  {
+    "objectId": "shape_6",
     "text": "THE CLAIM",
     "type": "insertText",
   },
   {
-    "objectId": "shape_5",
+    "objectId": "shape_6",
     "range": {
       "end": 9,
       "start": 0,
@@ -988,23 +993,23 @@ exports[`<TitleAndBody/> goldens > full: with eyebrows + footer > title-and-body
   },
   {
     "rect": {
-      "h": 1206500,
-      "w": 4191000,
-      "x": 1739900,
-      "y": 2184400,
+      "h": 304800,
+      "w": 4978400,
+      "x": 1117600,
+      "y": 2070100,
     },
     "shape": "TEXT_BOX",
-    "shapeId": "shape_6",
+    "shapeId": "shape_7",
     "slideId": "slide_1",
     "type": "createShape",
   },
   {
-    "objectId": "shape_6",
+    "objectId": "shape_7",
     "text": "Because content reuse compounds.",
     "type": "insertText",
   },
   {
-    "objectId": "shape_6",
+    "objectId": "shape_7",
     "range": {
       "end": 32,
       "start": 0,
@@ -1017,19 +1022,8 @@ exports[`<TitleAndBody/> goldens > full: with eyebrows + footer > title-and-body
     "type": "updateTextStyle",
   },
   {
-    "objectId": "shape_6",
-    "range": {
-      "end": 32,
-      "start": 0,
-    },
-    "style": {
-      "lineSpacing": 1.28,
-    },
-    "type": "updateParagraphStyle",
-  },
-  {
     "altText": "Sanity mark",
-    "imageId": "image_7",
+    "imageId": "image_8",
     "rect": {
       "h": 342900,
       "w": 431800,
@@ -1048,17 +1042,17 @@ exports[`<TitleAndBody/> goldens > full: with eyebrows + footer > title-and-body
       "y": 6311900,
     },
     "shape": "TEXT_BOX",
-    "shapeId": "shape_8",
+    "shapeId": "shape_9",
     "slideId": "slide_1",
     "type": "createShape",
   },
   {
-    "objectId": "shape_8",
+    "objectId": "shape_9",
     "text": "Sanity 2026",
     "type": "insertText",
   },
   {
-    "objectId": "shape_8",
+    "objectId": "shape_9",
     "range": {
       "end": 11,
       "start": 0,
@@ -1071,7 +1065,7 @@ exports[`<TitleAndBody/> goldens > full: with eyebrows + footer > title-and-body
     "type": "updateTextStyle",
   },
   {
-    "objectId": "shape_8",
+    "objectId": "shape_9",
     "range": {
       "end": 11,
       "start": 0,
@@ -1099,8 +1093,8 @@ exports[`<TitleAndBody/> goldens > minimal: title + body > title-and-body minima
   "generatedBy": "react-pptx",
   "manifestVersion": "1",
   "slots": {
-    "title-and-body:body": "shape_6",
-    "title-and-body:body-eyebrow": "shape_5",
+    "title-and-body:body": "shape_7",
+    "title-and-body:body-eyebrow": "shape_6",
     "title-and-body:eyebrow": "shape_3",
     "title-and-body:title": "shape_4",
   },
@@ -1136,10 +1130,10 @@ exports[`<TitleAndBody/> goldens > minimal: title + body > title-and-body minima
   },
   {
     "rect": {
-      "h": 228600,
-      "w": 5334000,
+      "h": 165100,
+      "w": 11582400,
       "x": 304800,
-      "y": 317500,
+      "y": 304800,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_3",
@@ -1166,10 +1160,10 @@ exports[`<TitleAndBody/> goldens > minimal: title + body > title-and-body minima
   },
   {
     "rect": {
-      "h": 939800,
-      "w": 9652000,
+      "h": 736600,
+      "w": 11582400,
       "x": 304800,
-      "y": 685800,
+      "y": 622300,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_4",
@@ -1195,22 +1189,11 @@ exports[`<TitleAndBody/> goldens > minimal: title + body > title-and-body minima
     "type": "updateTextStyle",
   },
   {
-    "objectId": "shape_4",
-    "range": {
-      "end": 21,
-      "start": 0,
-    },
-    "style": {
-      "lineSpacing": 1.05,
-    },
-    "type": "updateParagraphStyle",
-  },
-  {
     "rect": {
-      "h": 254000,
-      "w": 3619500,
-      "x": 1739900,
-      "y": 1892300,
+      "h": 876300,
+      "w": 5791200,
+      "x": 304800,
+      "y": 1498600,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_5",
@@ -1218,12 +1201,24 @@ exports[`<TitleAndBody/> goldens > minimal: title + body > title-and-body minima
     "type": "createShape",
   },
   {
-    "objectId": "shape_5",
+    "rect": {
+      "h": 165100,
+      "w": 4978400,
+      "x": 1117600,
+      "y": 1803400,
+    },
+    "shape": "TEXT_BOX",
+    "shapeId": "shape_6",
+    "slideId": "slide_1",
+    "type": "createShape",
+  },
+  {
+    "objectId": "shape_6",
     "text": "SUBTITLE",
     "type": "insertText",
   },
   {
-    "objectId": "shape_5",
+    "objectId": "shape_6",
     "range": {
       "end": 8,
       "start": 0,
@@ -1237,23 +1232,23 @@ exports[`<TitleAndBody/> goldens > minimal: title + body > title-and-body minima
   },
   {
     "rect": {
-      "h": 1206500,
-      "w": 4191000,
-      "x": 1739900,
-      "y": 2184400,
+      "h": 304800,
+      "w": 4978400,
+      "x": 1117600,
+      "y": 2070100,
     },
     "shape": "TEXT_BOX",
-    "shapeId": "shape_6",
+    "shapeId": "shape_7",
     "slideId": "slide_1",
     "type": "createShape",
   },
   {
-    "objectId": "shape_6",
+    "objectId": "shape_7",
     "text": "Because content reuse compounds.",
     "type": "insertText",
   },
   {
-    "objectId": "shape_6",
+    "objectId": "shape_7",
     "range": {
       "end": 32,
       "start": 0,
@@ -1266,19 +1261,8 @@ exports[`<TitleAndBody/> goldens > minimal: title + body > title-and-body minima
     "type": "updateTextStyle",
   },
   {
-    "objectId": "shape_6",
-    "range": {
-      "end": 32,
-      "start": 0,
-    },
-    "style": {
-      "lineSpacing": 1.28,
-    },
-    "type": "updateParagraphStyle",
-  },
-  {
     "altText": "Sanity mark",
-    "imageId": "image_7",
+    "imageId": "image_8",
     "rect": {
       "h": 342900,
       "w": 431800,
@@ -1297,7 +1281,7 @@ exports[`<TitleAndBody/> goldens > minimal: title + body > title-and-body minima
       "y": 6311900,
     },
     "shape": "TEXT_BOX",
-    "shapeId": "shape_8",
+    "shapeId": "shape_9",
     "slideId": "slide_1",
     "type": "createShape",
   },
@@ -1357,10 +1341,10 @@ exports[`<TitleAndGrid/> goldens > 2×1 grid of fields > title-and-grid 2x1 ops 
   },
   {
     "rect": {
-      "h": 228600,
-      "w": 5334000,
+      "h": 165100,
+      "w": 11582400,
       "x": 304800,
-      "y": 317500,
+      "y": 304800,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_3",
@@ -1387,10 +1371,10 @@ exports[`<TitleAndGrid/> goldens > 2×1 grid of fields > title-and-grid 2x1 ops 
   },
   {
     "rect": {
-      "h": 939800,
-      "w": 9652000,
+      "h": 736600,
+      "w": 11582400,
       "x": 304800,
-      "y": 685800,
+      "y": 622300,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_4",
@@ -1416,17 +1400,6 @@ exports[`<TitleAndGrid/> goldens > 2×1 grid of fields > title-and-grid 2x1 ops 
     "type": "updateTextStyle",
   },
   {
-    "objectId": "shape_4",
-    "range": {
-      "end": 9,
-      "start": 0,
-    },
-    "style": {
-      "lineSpacing": 1.05,
-    },
-    "type": "updateParagraphStyle",
-  },
-  {
     "altText": "",
     "imageId": "image_5",
     "rect": {
@@ -1441,10 +1414,10 @@ exports[`<TitleAndGrid/> goldens > 2×1 grid of fields > title-and-grid 2x1 ops 
   },
   {
     "rect": {
-      "h": 228600,
+      "h": 3327400,
       "w": 5257800,
       "x": 736600,
-      "y": 1955800,
+      "y": 1727200,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_6",
@@ -1452,12 +1425,24 @@ exports[`<TitleAndGrid/> goldens > 2×1 grid of fields > title-and-grid 2x1 ops 
     "type": "createShape",
   },
   {
-    "objectId": "shape_6",
+    "rect": {
+      "h": 165100,
+      "w": 5270500,
+      "x": 736600,
+      "y": 1930400,
+    },
+    "shape": "TEXT_BOX",
+    "shapeId": "shape_7",
+    "slideId": "slide_1",
+    "type": "createShape",
+  },
+  {
+    "objectId": "shape_7",
     "text": "CAMP A",
     "type": "insertText",
   },
   {
-    "objectId": "shape_6",
+    "objectId": "shape_7",
     "range": {
       "end": 6,
       "start": 0,
@@ -1471,23 +1456,23 @@ exports[`<TitleAndGrid/> goldens > 2×1 grid of fields > title-and-grid 2x1 ops 
   },
   {
     "rect": {
-      "h": 2819400,
-      "w": 5257800,
+      "h": 254000,
+      "w": 5270500,
       "x": 736600,
-      "y": 2235200,
+      "y": 2197100,
     },
     "shape": "TEXT_BOX",
-    "shapeId": "shape_7",
+    "shapeId": "shape_8",
     "slideId": "slide_1",
     "type": "createShape",
   },
   {
-    "objectId": "shape_7",
+    "objectId": "shape_8",
     "text": "Believes in structure.",
     "type": "insertText",
   },
   {
-    "objectId": "shape_7",
+    "objectId": "shape_8",
     "range": {
       "end": 22,
       "start": 0,
@@ -1500,19 +1485,8 @@ exports[`<TitleAndGrid/> goldens > 2×1 grid of fields > title-and-grid 2x1 ops 
     "type": "updateTextStyle",
   },
   {
-    "objectId": "shape_7",
-    "range": {
-      "end": 22,
-      "start": 0,
-    },
-    "style": {
-      "lineSpacing": 1.28,
-    },
-    "type": "updateParagraphStyle",
-  },
-  {
     "altText": "",
-    "imageId": "image_8",
+    "imageId": "image_9",
     "rect": {
       "h": 152400,
       "w": 5257800,
@@ -1525,23 +1499,35 @@ exports[`<TitleAndGrid/> goldens > 2×1 grid of fields > title-and-grid 2x1 ops 
   },
   {
     "rect": {
-      "h": 228600,
+      "h": 3327400,
       "w": 5257800,
       "x": 6197600,
-      "y": 1955800,
+      "y": 1727200,
     },
     "shape": "TEXT_BOX",
-    "shapeId": "shape_9",
+    "shapeId": "shape_10",
     "slideId": "slide_1",
     "type": "createShape",
   },
   {
-    "objectId": "shape_9",
+    "rect": {
+      "h": 165100,
+      "w": 5270500,
+      "x": 6197600,
+      "y": 1930400,
+    },
+    "shape": "TEXT_BOX",
+    "shapeId": "shape_11",
+    "slideId": "slide_1",
+    "type": "createShape",
+  },
+  {
+    "objectId": "shape_11",
     "text": "CAMP B",
     "type": "insertText",
   },
   {
-    "objectId": "shape_9",
+    "objectId": "shape_11",
     "range": {
       "end": 6,
       "start": 0,
@@ -1555,23 +1541,23 @@ exports[`<TitleAndGrid/> goldens > 2×1 grid of fields > title-and-grid 2x1 ops 
   },
   {
     "rect": {
-      "h": 2819400,
-      "w": 5257800,
+      "h": 254000,
+      "w": 5270500,
       "x": 6197600,
-      "y": 2235200,
+      "y": 2197100,
     },
     "shape": "TEXT_BOX",
-    "shapeId": "shape_10",
+    "shapeId": "shape_12",
     "slideId": "slide_1",
     "type": "createShape",
   },
   {
-    "objectId": "shape_10",
+    "objectId": "shape_12",
     "text": "Believes in flexibility.",
     "type": "insertText",
   },
   {
-    "objectId": "shape_10",
+    "objectId": "shape_12",
     "range": {
       "end": 24,
       "start": 0,
@@ -1584,19 +1570,8 @@ exports[`<TitleAndGrid/> goldens > 2×1 grid of fields > title-and-grid 2x1 ops 
     "type": "updateTextStyle",
   },
   {
-    "objectId": "shape_10",
-    "range": {
-      "end": 24,
-      "start": 0,
-    },
-    "style": {
-      "lineSpacing": 1.28,
-    },
-    "type": "updateParagraphStyle",
-  },
-  {
     "altText": "Sanity mark",
-    "imageId": "image_11",
+    "imageId": "image_13",
     "rect": {
       "h": 342900,
       "w": 431800,
@@ -1615,7 +1590,7 @@ exports[`<TitleAndGrid/> goldens > 2×1 grid of fields > title-and-grid 2x1 ops 
       "y": 6311900,
     },
     "shape": "TEXT_BOX",
-    "shapeId": "shape_12",
+    "shapeId": "shape_14",
     "slideId": "slide_1",
     "type": "createShape",
   },
@@ -1675,10 +1650,10 @@ exports[`<TitleAndGrid/> goldens > 3×2 grid of fields > title-and-grid 3x2 ops 
   },
   {
     "rect": {
-      "h": 228600,
-      "w": 5334000,
+      "h": 165100,
+      "w": 11582400,
       "x": 304800,
-      "y": 317500,
+      "y": 304800,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_3",
@@ -1705,10 +1680,10 @@ exports[`<TitleAndGrid/> goldens > 3×2 grid of fields > title-and-grid 3x2 ops 
   },
   {
     "rect": {
-      "h": 939800,
-      "w": 9652000,
+      "h": 736600,
+      "w": 11582400,
       "x": 304800,
-      "y": 685800,
+      "y": 622300,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_4",
@@ -1734,17 +1709,6 @@ exports[`<TitleAndGrid/> goldens > 3×2 grid of fields > title-and-grid 3x2 ops 
     "type": "updateTextStyle",
   },
   {
-    "objectId": "shape_4",
-    "range": {
-      "end": 23,
-      "start": 0,
-    },
-    "style": {
-      "lineSpacing": 1.05,
-    },
-    "type": "updateParagraphStyle",
-  },
-  {
     "altText": "",
     "imageId": "image_5",
     "rect": {
@@ -1759,10 +1723,10 @@ exports[`<TitleAndGrid/> goldens > 3×2 grid of fields > title-and-grid 3x2 ops 
   },
   {
     "rect": {
-      "h": 228600,
+      "h": 1562100,
       "w": 3441700,
       "x": 736600,
-      "y": 1955800,
+      "y": 1727200,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_6",
@@ -1770,12 +1734,24 @@ exports[`<TitleAndGrid/> goldens > 3×2 grid of fields > title-and-grid 3x2 ops 
     "type": "createShape",
   },
   {
-    "objectId": "shape_6",
+    "rect": {
+      "h": 165100,
+      "w": 3454400,
+      "x": 736600,
+      "y": 1930400,
+    },
+    "shape": "TEXT_BOX",
+    "shapeId": "shape_7",
+    "slideId": "slide_1",
+    "type": "createShape",
+  },
+  {
+    "objectId": "shape_7",
     "text": "REVENUE",
     "type": "insertText",
   },
   {
-    "objectId": "shape_6",
+    "objectId": "shape_7",
     "range": {
       "end": 7,
       "start": 0,
@@ -1789,23 +1765,23 @@ exports[`<TitleAndGrid/> goldens > 3×2 grid of fields > title-and-grid 3x2 ops 
   },
   {
     "rect": {
-      "h": 1054100,
-      "w": 3441700,
+      "h": 254000,
+      "w": 3454400,
       "x": 736600,
-      "y": 2235200,
+      "y": 2197100,
     },
     "shape": "TEXT_BOX",
-    "shapeId": "shape_7",
+    "shapeId": "shape_8",
     "slideId": "slide_1",
     "type": "createShape",
   },
   {
-    "objectId": "shape_7",
+    "objectId": "shape_8",
     "text": "+18% YoY",
     "type": "insertText",
   },
   {
-    "objectId": "shape_7",
+    "objectId": "shape_8",
     "range": {
       "end": 8,
       "start": 0,
@@ -1818,19 +1794,8 @@ exports[`<TitleAndGrid/> goldens > 3×2 grid of fields > title-and-grid 3x2 ops 
     "type": "updateTextStyle",
   },
   {
-    "objectId": "shape_7",
-    "range": {
-      "end": 8,
-      "start": 0,
-    },
-    "style": {
-      "lineSpacing": 1.28,
-    },
-    "type": "updateParagraphStyle",
-  },
-  {
     "altText": "",
-    "imageId": "image_8",
+    "imageId": "image_9",
     "rect": {
       "h": 152400,
       "w": 3429000,
@@ -1843,23 +1808,35 @@ exports[`<TitleAndGrid/> goldens > 3×2 grid of fields > title-and-grid 3x2 ops 
   },
   {
     "rect": {
-      "h": 228600,
+      "h": 1562100,
       "w": 3429000,
       "x": 4381500,
-      "y": 1955800,
+      "y": 1727200,
     },
     "shape": "TEXT_BOX",
-    "shapeId": "shape_9",
+    "shapeId": "shape_10",
     "slideId": "slide_1",
     "type": "createShape",
   },
   {
-    "objectId": "shape_9",
+    "rect": {
+      "h": 165100,
+      "w": 3454400,
+      "x": 4381500,
+      "y": 1930400,
+    },
+    "shape": "TEXT_BOX",
+    "shapeId": "shape_11",
+    "slideId": "slide_1",
+    "type": "createShape",
+  },
+  {
+    "objectId": "shape_11",
     "text": "GROWTH",
     "type": "insertText",
   },
   {
-    "objectId": "shape_9",
+    "objectId": "shape_11",
     "range": {
       "end": 6,
       "start": 0,
@@ -1873,23 +1850,23 @@ exports[`<TitleAndGrid/> goldens > 3×2 grid of fields > title-and-grid 3x2 ops 
   },
   {
     "rect": {
-      "h": 1054100,
-      "w": 3429000,
+      "h": 254000,
+      "w": 3454400,
       "x": 4381500,
-      "y": 2235200,
+      "y": 2197100,
     },
     "shape": "TEXT_BOX",
-    "shapeId": "shape_10",
+    "shapeId": "shape_12",
     "slideId": "slide_1",
     "type": "createShape",
   },
   {
-    "objectId": "shape_10",
+    "objectId": "shape_12",
     "text": "23% net new",
     "type": "insertText",
   },
   {
-    "objectId": "shape_10",
+    "objectId": "shape_12",
     "range": {
       "end": 11,
       "start": 0,
@@ -1902,19 +1879,8 @@ exports[`<TitleAndGrid/> goldens > 3×2 grid of fields > title-and-grid 3x2 ops 
     "type": "updateTextStyle",
   },
   {
-    "objectId": "shape_10",
-    "range": {
-      "end": 11,
-      "start": 0,
-    },
-    "style": {
-      "lineSpacing": 1.28,
-    },
-    "type": "updateParagraphStyle",
-  },
-  {
     "altText": "",
-    "imageId": "image_11",
+    "imageId": "image_13",
     "rect": {
       "h": 152400,
       "w": 3441700,
@@ -1927,23 +1893,35 @@ exports[`<TitleAndGrid/> goldens > 3×2 grid of fields > title-and-grid 3x2 ops 
   },
   {
     "rect": {
-      "h": 228600,
+      "h": 1562100,
       "w": 3441700,
       "x": 8013700,
-      "y": 1955800,
+      "y": 1727200,
     },
     "shape": "TEXT_BOX",
-    "shapeId": "shape_12",
+    "shapeId": "shape_14",
     "slideId": "slide_1",
     "type": "createShape",
   },
   {
-    "objectId": "shape_12",
+    "rect": {
+      "h": 165100,
+      "w": 3454400,
+      "x": 8013700,
+      "y": 1930400,
+    },
+    "shape": "TEXT_BOX",
+    "shapeId": "shape_15",
+    "slideId": "slide_1",
+    "type": "createShape",
+  },
+  {
+    "objectId": "shape_15",
     "text": "CHURN",
     "type": "insertText",
   },
   {
-    "objectId": "shape_12",
+    "objectId": "shape_15",
     "range": {
       "end": 5,
       "start": 0,
@@ -1957,94 +1935,10 @@ exports[`<TitleAndGrid/> goldens > 3×2 grid of fields > title-and-grid 3x2 ops 
   },
   {
     "rect": {
-      "h": 1054100,
-      "w": 3441700,
+      "h": 254000,
+      "w": 3454400,
       "x": 8013700,
-      "y": 2235200,
-    },
-    "shape": "TEXT_BOX",
-    "shapeId": "shape_13",
-    "slideId": "slide_1",
-    "type": "createShape",
-  },
-  {
-    "objectId": "shape_13",
-    "text": "Down 2pt",
-    "type": "insertText",
-  },
-  {
-    "objectId": "shape_13",
-    "range": {
-      "end": 8,
-      "start": 0,
-    },
-    "style": {
-      "fontFamily": "Arial",
-      "fontSize": 15,
-      "foregroundColor": "#ffffff",
-    },
-    "type": "updateTextStyle",
-  },
-  {
-    "objectId": "shape_13",
-    "range": {
-      "end": 8,
-      "start": 0,
-    },
-    "style": {
-      "lineSpacing": 1.28,
-    },
-    "type": "updateParagraphStyle",
-  },
-  {
-    "altText": "",
-    "imageId": "image_14",
-    "rect": {
-      "h": 152400,
-      "w": 3441700,
-      "x": 736600,
-      "y": 3492500,
-    },
-    "slideId": "slide_1",
-    "type": "createImage",
-    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNzAuOTMzMzMzMzMzMzMzMzQiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAyNzAuOTMzMzMzMzMzMzMzMzQgMTIiPjxjaXJjbGUgY3g9IjAuNjUiIGN5PSI2LjAwIiByPSIwLjY1IiBmaWxsPSIjYjliOWI5IiBvcGFjaXR5PSIwLjgiIC8+PGNpcmNsZSBjeD0iNS44NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIxMS4wNSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIxNi4yNSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIyMS40NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIyNi42NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIzMS44NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIzNy4wNSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSI0Mi4yNSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSI0Ny40NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSI1Mi42NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSI1Ny44NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSI2My4wNSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSI2OC4yNSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSI3My40NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSI3OC42NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSI4My44NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSI4OS4wNSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSI5NC4yNSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSI5OS40NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIxMDQuNjUiIGN5PSI2LjAwIiByPSIwLjY1IiBmaWxsPSIjYjliOWI5IiBvcGFjaXR5PSIwLjgiIC8+PGNpcmNsZSBjeD0iMTA5Ljg1IiBjeT0iNi4wMCIgcj0iMC42NSIgZmlsbD0iI2I5YjliOSIgb3BhY2l0eT0iMC44IiAvPjxjaXJjbGUgY3g9IjExNS4wNSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIxMjAuMjUiIGN5PSI2LjAwIiByPSIwLjY1IiBmaWxsPSIjYjliOWI5IiBvcGFjaXR5PSIwLjgiIC8+PGNpcmNsZSBjeD0iMTI1LjQ1IiBjeT0iNi4wMCIgcj0iMC42NSIgZmlsbD0iI2I5YjliOSIgb3BhY2l0eT0iMC44IiAvPjxjaXJjbGUgY3g9IjEzMC42NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIxMzUuODUiIGN5PSI2LjAwIiByPSIwLjY1IiBmaWxsPSIjYjliOWI5IiBvcGFjaXR5PSIwLjgiIC8+PGNpcmNsZSBjeD0iMTQxLjA1IiBjeT0iNi4wMCIgcj0iMC42NSIgZmlsbD0iI2I5YjliOSIgb3BhY2l0eT0iMC44IiAvPjxjaXJjbGUgY3g9IjE0Ni4yNSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIxNTEuNDUiIGN5PSI2LjAwIiByPSIwLjY1IiBmaWxsPSIjYjliOWI5IiBvcGFjaXR5PSIwLjgiIC8+PGNpcmNsZSBjeD0iMTU2LjY1IiBjeT0iNi4wMCIgcj0iMC42NSIgZmlsbD0iI2I5YjliOSIgb3BhY2l0eT0iMC44IiAvPjxjaXJjbGUgY3g9IjE2MS44NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIxNjcuMDUiIGN5PSI2LjAwIiByPSIwLjY1IiBmaWxsPSIjYjliOWI5IiBvcGFjaXR5PSIwLjgiIC8+PGNpcmNsZSBjeD0iMTcyLjI1IiBjeT0iNi4wMCIgcj0iMC42NSIgZmlsbD0iI2I5YjliOSIgb3BhY2l0eT0iMC44IiAvPjxjaXJjbGUgY3g9IjE3Ny40NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIxODIuNjUiIGN5PSI2LjAwIiByPSIwLjY1IiBmaWxsPSIjYjliOWI5IiBvcGFjaXR5PSIwLjgiIC8+PGNpcmNsZSBjeD0iMTg3Ljg1IiBjeT0iNi4wMCIgcj0iMC42NSIgZmlsbD0iI2I5YjliOSIgb3BhY2l0eT0iMC44IiAvPjxjaXJjbGUgY3g9IjE5My4wNSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIxOTguMjUiIGN5PSI2LjAwIiByPSIwLjY1IiBmaWxsPSIjYjliOWI5IiBvcGFjaXR5PSIwLjgiIC8+PGNpcmNsZSBjeD0iMjAzLjQ1IiBjeT0iNi4wMCIgcj0iMC42NSIgZmlsbD0iI2I5YjliOSIgb3BhY2l0eT0iMC44IiAvPjxjaXJjbGUgY3g9IjIwOC42NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIyMTMuODUiIGN5PSI2LjAwIiByPSIwLjY1IiBmaWxsPSIjYjliOWI5IiBvcGFjaXR5PSIwLjgiIC8+PGNpcmNsZSBjeD0iMjE5LjA1IiBjeT0iNi4wMCIgcj0iMC42NSIgZmlsbD0iI2I5YjliOSIgb3BhY2l0eT0iMC44IiAvPjxjaXJjbGUgY3g9IjIyNC4yNSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIyMjkuNDUiIGN5PSI2LjAwIiByPSIwLjY1IiBmaWxsPSIjYjliOWI5IiBvcGFjaXR5PSIwLjgiIC8+PGNpcmNsZSBjeD0iMjM0LjY1IiBjeT0iNi4wMCIgcj0iMC42NSIgZmlsbD0iI2I5YjliOSIgb3BhY2l0eT0iMC44IiAvPjxjaXJjbGUgY3g9IjIzOS44NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIyNDUuMDUiIGN5PSI2LjAwIiByPSIwLjY1IiBmaWxsPSIjYjliOWI5IiBvcGFjaXR5PSIwLjgiIC8+PGNpcmNsZSBjeD0iMjUwLjI1IiBjeT0iNi4wMCIgcj0iMC42NSIgZmlsbD0iI2I5YjliOSIgb3BhY2l0eT0iMC44IiAvPjxjaXJjbGUgY3g9IjI1NS40NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIyNjAuNjUiIGN5PSI2LjAwIiByPSIwLjY1IiBmaWxsPSIjYjliOWI5IiBvcGFjaXR5PSIwLjgiIC8+PGNpcmNsZSBjeD0iMjY1Ljg1IiBjeT0iNi4wMCIgcj0iMC42NSIgZmlsbD0iI2I5YjliOSIgb3BhY2l0eT0iMC44IiAvPjwvc3ZnPg==",
-  },
-  {
-    "rect": {
-      "h": 228600,
-      "w": 3441700,
-      "x": 736600,
-      "y": 3721100,
-    },
-    "shape": "TEXT_BOX",
-    "shapeId": "shape_15",
-    "slideId": "slide_1",
-    "type": "createShape",
-  },
-  {
-    "objectId": "shape_15",
-    "text": "ARR",
-    "type": "insertText",
-  },
-  {
-    "objectId": "shape_15",
-    "range": {
-      "end": 3,
-      "start": 0,
-    },
-    "style": {
-      "fontFamily": "IBM Plex Mono",
-      "fontSize": 10,
-      "foregroundColor": "#b9b9b9",
-    },
-    "type": "updateTextStyle",
-  },
-  {
-    "rect": {
-      "h": 1054100,
-      "w": 3441700,
-      "x": 736600,
-      "y": 4000500,
+      "y": 2197100,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_16",
@@ -2053,13 +1947,13 @@ exports[`<TitleAndGrid/> goldens > 3×2 grid of fields > title-and-grid 3x2 ops 
   },
   {
     "objectId": "shape_16",
-    "text": "$54M",
+    "text": "Down 2pt",
     "type": "insertText",
   },
   {
     "objectId": "shape_16",
     "range": {
-      "end": 4,
+      "end": 8,
       "start": 0,
     },
     "style": {
@@ -2070,23 +1964,12 @@ exports[`<TitleAndGrid/> goldens > 3×2 grid of fields > title-and-grid 3x2 ops 
     "type": "updateTextStyle",
   },
   {
-    "objectId": "shape_16",
-    "range": {
-      "end": 4,
-      "start": 0,
-    },
-    "style": {
-      "lineSpacing": 1.28,
-    },
-    "type": "updateParagraphStyle",
-  },
-  {
     "altText": "",
     "imageId": "image_17",
     "rect": {
       "h": 152400,
-      "w": 3429000,
-      "x": 4381500,
+      "w": 3441700,
+      "x": 736600,
       "y": 3492500,
     },
     "slideId": "slide_1",
@@ -2095,10 +1978,10 @@ exports[`<TitleAndGrid/> goldens > 3×2 grid of fields > title-and-grid 3x2 ops 
   },
   {
     "rect": {
-      "h": 228600,
-      "w": 3429000,
-      "x": 4381500,
-      "y": 3721100,
+      "h": 1562100,
+      "w": 3441700,
+      "x": 736600,
+      "y": 3492500,
     },
     "shape": "TEXT_BOX",
     "shapeId": "shape_18",
@@ -2106,12 +1989,24 @@ exports[`<TitleAndGrid/> goldens > 3×2 grid of fields > title-and-grid 3x2 ops 
     "type": "createShape",
   },
   {
-    "objectId": "shape_18",
-    "text": "NPS",
+    "rect": {
+      "h": 165100,
+      "w": 3454400,
+      "x": 736600,
+      "y": 3695700,
+    },
+    "shape": "TEXT_BOX",
+    "shapeId": "shape_19",
+    "slideId": "slide_1",
+    "type": "createShape",
+  },
+  {
+    "objectId": "shape_19",
+    "text": "ARR",
     "type": "insertText",
   },
   {
-    "objectId": "shape_18",
+    "objectId": "shape_19",
     "range": {
       "end": 3,
       "start": 0,
@@ -2125,23 +2020,108 @@ exports[`<TitleAndGrid/> goldens > 3×2 grid of fields > title-and-grid 3x2 ops 
   },
   {
     "rect": {
-      "h": 1054100,
-      "w": 3429000,
-      "x": 4381500,
-      "y": 4000500,
+      "h": 254000,
+      "w": 3454400,
+      "x": 736600,
+      "y": 3962400,
     },
     "shape": "TEXT_BOX",
-    "shapeId": "shape_19",
+    "shapeId": "shape_20",
     "slideId": "slide_1",
     "type": "createShape",
   },
   {
-    "objectId": "shape_19",
+    "objectId": "shape_20",
+    "text": "$54M",
+    "type": "insertText",
+  },
+  {
+    "objectId": "shape_20",
+    "range": {
+      "end": 4,
+      "start": 0,
+    },
+    "style": {
+      "fontFamily": "Arial",
+      "fontSize": 15,
+      "foregroundColor": "#ffffff",
+    },
+    "type": "updateTextStyle",
+  },
+  {
+    "altText": "",
+    "imageId": "image_21",
+    "rect": {
+      "h": 152400,
+      "w": 3429000,
+      "x": 4381500,
+      "y": 3492500,
+    },
+    "slideId": "slide_1",
+    "type": "createImage",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNzAuOTMzMzMzMzMzMzMzMzQiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAyNzAuOTMzMzMzMzMzMzMzMzQgMTIiPjxjaXJjbGUgY3g9IjAuNjUiIGN5PSI2LjAwIiByPSIwLjY1IiBmaWxsPSIjYjliOWI5IiBvcGFjaXR5PSIwLjgiIC8+PGNpcmNsZSBjeD0iNS44NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIxMS4wNSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIxNi4yNSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIyMS40NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIyNi42NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIzMS44NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIzNy4wNSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSI0Mi4yNSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSI0Ny40NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSI1Mi42NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSI1Ny44NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSI2My4wNSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSI2OC4yNSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSI3My40NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSI3OC42NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSI4My44NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSI4OS4wNSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSI5NC4yNSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSI5OS40NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIxMDQuNjUiIGN5PSI2LjAwIiByPSIwLjY1IiBmaWxsPSIjYjliOWI5IiBvcGFjaXR5PSIwLjgiIC8+PGNpcmNsZSBjeD0iMTA5Ljg1IiBjeT0iNi4wMCIgcj0iMC42NSIgZmlsbD0iI2I5YjliOSIgb3BhY2l0eT0iMC44IiAvPjxjaXJjbGUgY3g9IjExNS4wNSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIxMjAuMjUiIGN5PSI2LjAwIiByPSIwLjY1IiBmaWxsPSIjYjliOWI5IiBvcGFjaXR5PSIwLjgiIC8+PGNpcmNsZSBjeD0iMTI1LjQ1IiBjeT0iNi4wMCIgcj0iMC42NSIgZmlsbD0iI2I5YjliOSIgb3BhY2l0eT0iMC44IiAvPjxjaXJjbGUgY3g9IjEzMC42NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIxMzUuODUiIGN5PSI2LjAwIiByPSIwLjY1IiBmaWxsPSIjYjliOWI5IiBvcGFjaXR5PSIwLjgiIC8+PGNpcmNsZSBjeD0iMTQxLjA1IiBjeT0iNi4wMCIgcj0iMC42NSIgZmlsbD0iI2I5YjliOSIgb3BhY2l0eT0iMC44IiAvPjxjaXJjbGUgY3g9IjE0Ni4yNSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIxNTEuNDUiIGN5PSI2LjAwIiByPSIwLjY1IiBmaWxsPSIjYjliOWI5IiBvcGFjaXR5PSIwLjgiIC8+PGNpcmNsZSBjeD0iMTU2LjY1IiBjeT0iNi4wMCIgcj0iMC42NSIgZmlsbD0iI2I5YjliOSIgb3BhY2l0eT0iMC44IiAvPjxjaXJjbGUgY3g9IjE2MS44NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIxNjcuMDUiIGN5PSI2LjAwIiByPSIwLjY1IiBmaWxsPSIjYjliOWI5IiBvcGFjaXR5PSIwLjgiIC8+PGNpcmNsZSBjeD0iMTcyLjI1IiBjeT0iNi4wMCIgcj0iMC42NSIgZmlsbD0iI2I5YjliOSIgb3BhY2l0eT0iMC44IiAvPjxjaXJjbGUgY3g9IjE3Ny40NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIxODIuNjUiIGN5PSI2LjAwIiByPSIwLjY1IiBmaWxsPSIjYjliOWI5IiBvcGFjaXR5PSIwLjgiIC8+PGNpcmNsZSBjeD0iMTg3Ljg1IiBjeT0iNi4wMCIgcj0iMC42NSIgZmlsbD0iI2I5YjliOSIgb3BhY2l0eT0iMC44IiAvPjxjaXJjbGUgY3g9IjE5My4wNSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIxOTguMjUiIGN5PSI2LjAwIiByPSIwLjY1IiBmaWxsPSIjYjliOWI5IiBvcGFjaXR5PSIwLjgiIC8+PGNpcmNsZSBjeD0iMjAzLjQ1IiBjeT0iNi4wMCIgcj0iMC42NSIgZmlsbD0iI2I5YjliOSIgb3BhY2l0eT0iMC44IiAvPjxjaXJjbGUgY3g9IjIwOC42NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIyMTMuODUiIGN5PSI2LjAwIiByPSIwLjY1IiBmaWxsPSIjYjliOWI5IiBvcGFjaXR5PSIwLjgiIC8+PGNpcmNsZSBjeD0iMjE5LjA1IiBjeT0iNi4wMCIgcj0iMC42NSIgZmlsbD0iI2I5YjliOSIgb3BhY2l0eT0iMC44IiAvPjxjaXJjbGUgY3g9IjIyNC4yNSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIyMjkuNDUiIGN5PSI2LjAwIiByPSIwLjY1IiBmaWxsPSIjYjliOWI5IiBvcGFjaXR5PSIwLjgiIC8+PGNpcmNsZSBjeD0iMjM0LjY1IiBjeT0iNi4wMCIgcj0iMC42NSIgZmlsbD0iI2I5YjliOSIgb3BhY2l0eT0iMC44IiAvPjxjaXJjbGUgY3g9IjIzOS44NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIyNDUuMDUiIGN5PSI2LjAwIiByPSIwLjY1IiBmaWxsPSIjYjliOWI5IiBvcGFjaXR5PSIwLjgiIC8+PGNpcmNsZSBjeD0iMjUwLjI1IiBjeT0iNi4wMCIgcj0iMC42NSIgZmlsbD0iI2I5YjliOSIgb3BhY2l0eT0iMC44IiAvPjxjaXJjbGUgY3g9IjI1NS40NSIgY3k9IjYuMDAiIHI9IjAuNjUiIGZpbGw9IiNiOWI5YjkiIG9wYWNpdHk9IjAuOCIgLz48Y2lyY2xlIGN4PSIyNjAuNjUiIGN5PSI2LjAwIiByPSIwLjY1IiBmaWxsPSIjYjliOWI5IiBvcGFjaXR5PSIwLjgiIC8+PGNpcmNsZSBjeD0iMjY1Ljg1IiBjeT0iNi4wMCIgcj0iMC42NSIgZmlsbD0iI2I5YjliOSIgb3BhY2l0eT0iMC44IiAvPjwvc3ZnPg==",
+  },
+  {
+    "rect": {
+      "h": 1562100,
+      "w": 3429000,
+      "x": 4381500,
+      "y": 3492500,
+    },
+    "shape": "TEXT_BOX",
+    "shapeId": "shape_22",
+    "slideId": "slide_1",
+    "type": "createShape",
+  },
+  {
+    "rect": {
+      "h": 165100,
+      "w": 3454400,
+      "x": 4381500,
+      "y": 3695700,
+    },
+    "shape": "TEXT_BOX",
+    "shapeId": "shape_23",
+    "slideId": "slide_1",
+    "type": "createShape",
+  },
+  {
+    "objectId": "shape_23",
+    "text": "NPS",
+    "type": "insertText",
+  },
+  {
+    "objectId": "shape_23",
+    "range": {
+      "end": 3,
+      "start": 0,
+    },
+    "style": {
+      "fontFamily": "IBM Plex Mono",
+      "fontSize": 10,
+      "foregroundColor": "#b9b9b9",
+    },
+    "type": "updateTextStyle",
+  },
+  {
+    "rect": {
+      "h": 254000,
+      "w": 3454400,
+      "x": 4381500,
+      "y": 3962400,
+    },
+    "shape": "TEXT_BOX",
+    "shapeId": "shape_24",
+    "slideId": "slide_1",
+    "type": "createShape",
+  },
+  {
+    "objectId": "shape_24",
     "text": "62",
     "type": "insertText",
   },
   {
-    "objectId": "shape_19",
+    "objectId": "shape_24",
     "range": {
       "end": 2,
       "start": 0,
@@ -2154,19 +2134,8 @@ exports[`<TitleAndGrid/> goldens > 3×2 grid of fields > title-and-grid 3x2 ops 
     "type": "updateTextStyle",
   },
   {
-    "objectId": "shape_19",
-    "range": {
-      "end": 2,
-      "start": 0,
-    },
-    "style": {
-      "lineSpacing": 1.28,
-    },
-    "type": "updateParagraphStyle",
-  },
-  {
     "altText": "",
-    "imageId": "image_20",
+    "imageId": "image_25",
     "rect": {
       "h": 152400,
       "w": 3441700,
@@ -2179,23 +2148,35 @@ exports[`<TitleAndGrid/> goldens > 3×2 grid of fields > title-and-grid 3x2 ops 
   },
   {
     "rect": {
-      "h": 228600,
+      "h": 1562100,
       "w": 3441700,
       "x": 8013700,
-      "y": 3721100,
+      "y": 3492500,
     },
     "shape": "TEXT_BOX",
-    "shapeId": "shape_21",
+    "shapeId": "shape_26",
     "slideId": "slide_1",
     "type": "createShape",
   },
   {
-    "objectId": "shape_21",
+    "rect": {
+      "h": 165100,
+      "w": 3454400,
+      "x": 8013700,
+      "y": 3695700,
+    },
+    "shape": "TEXT_BOX",
+    "shapeId": "shape_27",
+    "slideId": "slide_1",
+    "type": "createShape",
+  },
+  {
+    "objectId": "shape_27",
     "text": "HEADCOUNT",
     "type": "insertText",
   },
   {
-    "objectId": "shape_21",
+    "objectId": "shape_27",
     "range": {
       "end": 9,
       "start": 0,
@@ -2209,23 +2190,23 @@ exports[`<TitleAndGrid/> goldens > 3×2 grid of fields > title-and-grid 3x2 ops 
   },
   {
     "rect": {
-      "h": 1054100,
-      "w": 3441700,
+      "h": 254000,
+      "w": 3454400,
       "x": 8013700,
-      "y": 4000500,
+      "y": 3962400,
     },
     "shape": "TEXT_BOX",
-    "shapeId": "shape_22",
+    "shapeId": "shape_28",
     "slideId": "slide_1",
     "type": "createShape",
   },
   {
-    "objectId": "shape_22",
+    "objectId": "shape_28",
     "text": "180",
     "type": "insertText",
   },
   {
-    "objectId": "shape_22",
+    "objectId": "shape_28",
     "range": {
       "end": 3,
       "start": 0,
@@ -2238,19 +2219,8 @@ exports[`<TitleAndGrid/> goldens > 3×2 grid of fields > title-and-grid 3x2 ops 
     "type": "updateTextStyle",
   },
   {
-    "objectId": "shape_22",
-    "range": {
-      "end": 3,
-      "start": 0,
-    },
-    "style": {
-      "lineSpacing": 1.28,
-    },
-    "type": "updateParagraphStyle",
-  },
-  {
     "altText": "Sanity mark",
-    "imageId": "image_23",
+    "imageId": "image_29",
     "rect": {
       "h": 342900,
       "w": 431800,
@@ -2269,7 +2239,7 @@ exports[`<TitleAndGrid/> goldens > 3×2 grid of fields > title-and-grid 3x2 ops 
       "y": 6311900,
     },
     "shape": "TEXT_BOX",
-    "shapeId": "shape_24",
+    "shapeId": "shape_30",
     "slideId": "slide_1",
     "type": "createShape",
   },

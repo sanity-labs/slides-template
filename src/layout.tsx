@@ -13,11 +13,14 @@
  *
  * Cover and Closing pass `lockup: true`; section dividers pass a tone;
  * everything else takes the defaults.
+ *
+ * All chrome pieces are rect-positioned (absolute) so they don't disturb
+ * the inner slide content's flex layout.
  */
 
 import type { ReactElement } from 'react';
-import { Image, defineLayout } from '@sanity-labs/slides';
-import { Background, BRAND_IMAGES, BrandText, COLORS, type BrandTone } from './components/brand.js';
+import { Box, Image, defineLayout } from '@sanity-labs/slides';
+import { Background, BRAND_IMAGES, type BrandTone } from './components/brand.js';
 
 export type SanityLayoutProps = {
   readonly tone?: BrandTone;
@@ -36,7 +39,8 @@ const markForTone = (tone: BrandTone) => {
   return BRAND_IMAGES.markWhite;
 };
 
-const toneMuted = (tone: BrandTone) => (tone === 'dark' ? COLORS.gray300 : COLORS.black);
+const footerColorClass = (tone: BrandTone): string =>
+  tone === 'dark' ? 'text-gray-300' : 'text-black';
 
 export const SanityLayout = defineLayout<SanityLayoutProps>(
   ({ children, layoutProps }): ReactElement => {
@@ -59,15 +63,12 @@ export const SanityLayout = defineLayout<SanityLayoutProps>(
           altText={lockup ? 'Sanity logo' : 'Sanity mark'}
         />
         {footerText === null ? null : (
-          <BrandText
+          <Box
             rect={{ x: 826, y: 497, w: 110, h: 16 }}
-            size={10}
-            color={toneMuted(tone)}
-            font="mono"
-            align="END"
+            className={`text-role-footer text-right ${footerColorClass(tone)}`}
           >
             {footerText}
-          </BrandText>
+          </Box>
         )}
       </>
     );

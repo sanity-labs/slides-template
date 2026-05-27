@@ -1,7 +1,6 @@
 import type { ReactElement } from 'react';
-import { Slide } from '@sanity-labs/slides';
+import { Box, Slide } from '@sanity-labs/slides';
 import { z } from 'zod';
-import { BrandText, COLORS, TopLabel } from './brand.js';
 
 export const CoverSchema = z
   .object({
@@ -17,28 +16,20 @@ export const CoverSchema = z
 type CoverProps = z.infer<typeof CoverSchema>;
 
 export const Cover = ({ title, subtitle, eyebrow = 'EYEBROW' }: CoverProps): ReactElement => (
-  <Slide layoutProps={{ lockup: true }}>
-    <TopLabel slotId="cover:eyebrow">{eyebrow}</TopLabel>
-    <BrandText
-      rect={{ x: 24, y: 56, w: 700, h: 146 }}
-      size={66}
-      color={COLORS.white}
-      lineSpacing={1.05}
-      slotId="cover:title"
-    >
+  <Slide layoutProps={{ lockup: true }} className="flex flex-col p-6 gap-3">
+    <Box className="text-role-eyebrow text-gray-300" slotId="cover:eyebrow">
+      {eyebrow}
+    </Box>
+    <Box className="text-role-cover-title text-white" slotId="cover:title">
       {title}
-    </BrandText>
+    </Box>
     {subtitle === undefined ? null : (
-      <BrandText
-        rect={{ x: 64, y: 226, w: 430, h: 96 }}
-        size={24}
-        color={COLORS.white}
-        font="body"
-        lineSpacing={1.24}
+      <Box
+        className="text-role-cover-subtitle text-white pt-4 pl-10 w-1/2"
         slotId="cover:subtitle"
       >
         {subtitle}
-      </BrandText>
+      </Box>
     )}
   </Slide>
 );
